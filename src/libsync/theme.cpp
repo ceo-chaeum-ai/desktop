@@ -143,11 +143,13 @@ QString Theme::aboutVersions(Theme::VersionFormat format) const
 
 QString Theme::about() const
 {
-    return tr("<p>Version %1. For more information visit <a href=\"https://opencloud.eu/\">https://opencloud.eu/</a></p>"
-              "<p>For known issues and help, please visit: <a href=\"https://github.com/opencloud-eu/desktop\">GitHub</a></p>"
-              "<p>Copyright OpenCloud GmbH<br/>"
+    // Modified by ChaeumAI Inc. on 2026-11-16: distributor and source location of Chaeum Drive.
+    return tr("<p>Version %1. Based on OpenCloud Desktop.</p>"
+              "<p>Source code: <a href=\"https://github.com/ceo-chaeum-ai/desktop\">GitHub</a></p>"
+              "<p>Copyright ChaeumAI Inc. (modifications)<br/>"
+              "Copyright OpenCloud GmbH<br/>"
               "Copyright ownCloud GmbH</p>"
-              "<p>Distributed by OpenCloud GmbH and licensed under the GNU General Public License (GPL) Version 2.0.<br/>"
+              "<p>Distributed by ChaeumAI Inc. and licensed under the GNU General Public License (GPL) Version 2.0.<br/>"
               "<p><small>%2</small></p>")
         .arg(Utility::escape(Version::displayString()), aboutVersions(Theme::VersionFormat::RichText));
 }
