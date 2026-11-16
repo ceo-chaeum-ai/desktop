@@ -1,0 +1,85 @@
+# 채움드라이브 Windows 판(서명 없음, NSIS 설치본). (주)채움에이아이가 2026-11-16 main.yml 을 바탕으로 더함.
+# 원본 main.yml 은 그대로 두고, 이 갈래는 이 워크플로만 쓴다.
+name: Chaeum Drive Windows
+
+on:
+  push:
+    branches:
+      - chaeum
+  workflow_dispatch:
+
+concurrency:
+  group: chaeum-windows-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: pwsh
+
+jobs:
+  windows:
+    runs-on: windows-2025-vs2026
+    env:
+      CRAFT_TARGET: windows-cl-msvc2026-x86_64
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CRAFT_PACKAGE_SYMBOLS: false
+      SIGN_PACKAGE: false
+    steps:
+    - uses: actions/checkout@v7
+
+    - name: Restore and update cache
+      uses: actions/cache@v6
+      with:
+        path: ~/ccache
+        key: ${{ runner.os }}-chaeum-${{ github.run_id }}
+        restore-keys: ${{ runner.os }}-chaeum
+
+    - name: Clone CraftMaster
+      run: git clone --depth=1 https://github.com/KDE/craftmaster.git "${home}/craft/CraftMaster/CraftMaster"
+
+    - name: Craft setup
+      run: |
+        New-Item -Path ~/cache -ItemType Directory -ErrorAction SilentlyContinue
+        git config --global --add safe.directory '*'
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" --setup
+
+    - name: Craft unshelve
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --unshelve "${env:GITHUB_WORKSPACE}/.craft.shelf"
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c craft
+
+    - name: Prepare
+      run: |
+        New-Item -ItemType Directory "${env:GITHUB_WORKSPACE}/binaries/"
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --set "srcDir=${env:GITHUB_WORKSPACE}" opencloud/opencloud-desktop
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --set "buildNumber=${{ github.run_number }}" opencloud/opencloud-desktop
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c dev-utils/nsis
+
+    - name: Install dependencies
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --install-deps opencloud/opencloud-desktop
+
+    - name: Build
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache opencloud/opencloud-desktop
+
+    - name: Package (NSIS installer)
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache --package --options "[Packager]PackageType=NullsoftInstallerPackager" opencloud/opencloud-desktop
+
+    - name: Package (portable zip)
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache --package --options "[Packager]PackageType=PortablePackager" opencloud/opencloud-desktop
+
+    - name: Collect
+      run: |
+        Copy-Item "${home}/craft/binaries/*" "${env:GITHUB_WORKSPACE}/binaries/" -ErrorAction SilentlyContinue
+        Get-ChildItem "${env:GITHUB_WORKSPACE}/binaries/"
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: chaeum-drive-windows-${{ github.run_number }}
+        path: ${{ github.workspace }}/binaries/*
