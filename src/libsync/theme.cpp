@@ -82,7 +82,8 @@ QString Theme::gitSHA1(VersionFormat format) const
     if (!aboutShowCopyright()) {
         return gitShahSort;
     }
-    const auto gitUrl = QStringLiteral("https://github.com/opencloud-eu/desktop/commit/%1").arg(Version::gitSha());
+    // Modified by ChaeumAI Inc. on 2026-11-16: commit link points to the Chaeum Drive source.
+    const auto gitUrl = QStringLiteral("https://github.com/ceo-chaeum-ai/desktop/commit/%1").arg(Version::gitSha());
     switch (format) {
     case Theme::VersionFormat::OneLiner:
         Q_FALLTHROUGH();
