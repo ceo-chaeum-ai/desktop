@@ -99,7 +99,8 @@ endif()
 ## -DWITH_AUTO_UPDATER=ON
 option(WITH_AUTO_UPDATER "WITH_AUTO_UPDATER" OFF)
 ## -DWITH_UPDATE_NOTIFICATION=OFF
-option(WITH_UPDATE_NOTIFICATION "Whether to check for new releases" ON)
+# Modified by ChaeumAI Inc. on 2026-11-16: Chaeum Drive must not ask the OpenCloud update server about new releases.
+option(WITH_UPDATE_NOTIFICATION "Whether to check for new releases" OFF)
 
 # create a co-installable client, that uses a separate profile
 ## -DBETA_CHANNEL_BUILD=ON

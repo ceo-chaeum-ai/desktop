@@ -58,7 +58,8 @@ Theme::Theme()
 
 QUrl Theme::helpUrl() const
 {
-    return QUrl(QStringLiteral("https://docs.opencloud.eu/docs/user/desktop-client"));
+    // Modified by ChaeumAI Inc. on 2026-11-16: no help link (the tray menu hides "Help" when this is empty).
+    return {};
 }
 
 QUrl Theme::updateCheckUrl() const

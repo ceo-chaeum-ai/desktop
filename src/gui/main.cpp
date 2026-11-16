@@ -97,13 +97,14 @@ CommandLineOptions parseOptions(const QStringList &arguments)
     QString descriptionText;
     QTextStream descriptionTextStream(&descriptionText);
 
+    // Modified by ChaeumAI Inc. on 2026-11-16: homepage link points to the Chaeum Drive source.
     descriptionTextStream
         << QApplication::translate("CommandLine", "%1 version %2\r\nFile synchronization desktop utility.")
                .arg(Resources::JsonTheme::instance().applicationName(), OCC::Version::displayString())
         << Qt::endl
         << Qt::endl
         << Qt::endl
-        << QApplication::translate("CommandLine", "For more information, see %1", "link to homepage").arg(QStringLiteral("https://www.opencloud.eu"));
+        << QApplication::translate("CommandLine", "For more information, see %1", "link to homepage").arg(QStringLiteral("https://github.com/ceo-chaeum-ai/desktop"));
 
     parser.setApplicationDescription(descriptionText);
 
