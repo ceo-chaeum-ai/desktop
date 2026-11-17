@@ -1,4 +1,6 @@
-# 채움드라이브 Windows 판(서명 없음, NSIS 설치본). (주)채움에이아이가 2026-11-16 main.yml 을 바탕으로 더함.
+# 채움드라이브 Windows 판(서명 없음, NSIS 설치본)과 Microsoft Store 묶음(MSIX). (주)채움에이아이가 2026-11-16 main.yml 을 바탕으로 더함.
+# 2026-11-18: Store 묶음을 더함. store 결과물(.msixupload)을 Partner Center 에 올리면 Store 가 서명한다.
+# test 결과물은 같은 MSIX 를 시험용 자체 인증서로 서명한 것과 그 인증서(.cer)다. 시험 PC 의 LocalMachine\TrustedPeople 에 인증서를 넣은 뒤 깐다.
 # 원본 main.yml 은 그대로 두고, 이 갈래는 이 워크플로만 쓴다.
 name: Chaeum Drive Windows
 
@@ -74,6 +76,41 @@ jobs:
       run: |
         & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache --package --options "[Packager]PackageType=PortablePackager" opencloud/opencloud-desktop
 
+    - name: Package (Store MSIX)
+      run: |
+        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache --package --options "[Packager]PackageType=AppxPackager" --options "[Packager]Destination=${{ github.workspace }}/msix/" opencloud/opencloud-desktop
+        Get-ChildItem "${{ github.workspace }}/msix/"
+
+    - name: Test-sign MSIX
+      run: |
+        $upload = Get-ChildItem "${{ github.workspace }}/msix/*.msixupload" | Select-Object -First 1
+        if (-not $upload) { throw "no .msixupload" }
+        New-Item -ItemType Directory -Force "${{ github.workspace }}/out/store", "${{ github.workspace }}/out/test", "${{ runner.temp }}/unzip" | Out-Null
+        Copy-Item $upload.FullName "${{ github.workspace }}/out/store/"
+        Copy-Item $upload.FullName "${{ runner.temp }}/upload.zip"
+        Expand-Archive "${{ runner.temp }}/upload.zip" -DestinationPath "${{ runner.temp }}/unzip" -Force
+        $msix = Get-ChildItem "${{ runner.temp }}/unzip/*.msix" | Select-Object -First 1
+        if (-not $msix) { throw "no .msix inside the .msixupload" }
+        Add-Type -AssemblyName System.IO.Compression.FileSystem
+        $zip = [System.IO.Compression.ZipFile]::OpenRead($msix.FullName)
+        $entry = $zip.Entries | Where-Object { $_.FullName -eq 'AppxManifest.xml' }
+        $reader = New-Object System.IO.StreamReader($entry.Open())
+        $text = $reader.ReadToEnd(); $reader.Close(); $zip.Dispose()
+        Set-Content -Path "${{ github.workspace }}/out/store/AppxManifest.xml" -Value $text -Encoding utf8
+        [xml]$manifest = $text
+        $manifest.Package.Identity | Format-List | Out-String | Write-Host
+        $publisher = $manifest.Package.Identity.Publisher
+        $cert = New-SelfSignedCertificate -Type Custom -Subject $publisher -KeyUsage DigitalSignature `
+          -FriendlyName 'Chaeum Drive MSIX test' -CertStoreLocation Cert:\CurrentUser\My `
+          -TextExtension @('2.5.29.37={text}1.3.6.1.5.5.7.3.3', '2.5.29.19={text}')
+        Export-Certificate -Cert $cert -FilePath "${{ github.workspace }}/out/test/chaeum-drive-msix-test.cer" | Out-Null
+        $signed = Join-Path "${{ github.workspace }}/out/test" ($msix.BaseName + '-test-signed.msix')
+        Copy-Item $msix.FullName $signed
+        $signtool = Get-ChildItem "${env:ProgramFiles(x86)}/Windows Kits/10/bin/*/x64/signtool.exe" | Sort-Object { [version]$_.Directory.Parent.Name } | Select-Object -Last 1
+        & $signtool.FullName sign /fd SHA256 /sha1 $cert.Thumbprint $signed
+        if ($LASTEXITCODE -ne 0) { throw "signtool failed" }
+        Get-ChildItem "${{ github.workspace }}/out" -Recurse
+
     - name: Collect
       run: |
         Copy-Item "${home}/craft/binaries/*" "${env:GITHUB_WORKSPACE}/binaries/" -ErrorAction SilentlyContinue
@@ -83,3 +120,15 @@ jobs:
       with:
         name: chaeum-drive-windows-${{ github.run_number }}
         path: ${{ github.workspace }}/binaries/*
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: chaeum-drive-store-${{ github.run_number }}
+        path: ${{ github.workspace }}/out/store/*
+        compression-level: 0
+
+    - uses: actions/upload-artifact@v7
+      with:
+        name: chaeum-drive-msix-test-${{ github.run_number }}
+        path: ${{ github.workspace }}/out/test/*
+        compression-level: 0
