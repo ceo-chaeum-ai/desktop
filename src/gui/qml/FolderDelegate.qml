@@ -55,8 +55,10 @@ Pane {
         function onFocusLast() {
             if (listView.currentItem) {
                 listView.currentItem.forceActiveFocus(Qt.TabFocusReason);
-            } else {
+            } else if (addSyncButton.enabled) {
                 addSyncButton.forceActiveFocus(Qt.TabFocusReason);
+            } else {
+                manageAccountButton.forceActiveFocus(Qt.TabFocusReason);
             }
         }
     }
@@ -317,7 +319,11 @@ Pane {
                         }
 
                         Keys.onBacktabPressed: {
-                            addSyncButton.forceActiveFocus(Qt.TabFocusReason);
+                            if (addSyncButton.enabled) {
+                                addSyncButton.forceActiveFocus(Qt.TabFocusReason);
+                            } else {
+                                manageAccountButton.forceActiveFocus(Qt.TabFocusReason);
+                            }
                         }
                         Keys.onTabPressed: {
                             widget.parentFocusWidget.focusNext();
