@@ -33,7 +33,7 @@
     <item>
      <widget class="QStackedWidget" name="dialogStack">
       <widget class="QWidget" name="page">
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="verticalLayout_2">
         <property name="spacing">
          <number>0</number>
         </property>

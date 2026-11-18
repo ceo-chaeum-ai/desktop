@@ -55,7 +55,12 @@ public:
         Priority,
         Quota,
         FolderStatusIcon,
-        Folder
+        Folder,
+        // Chaeum Drive card (2026-11-18)
+        StatusKind,
+        StatusText,
+        LocalPath,
+        QuotaFraction
     };
     Q_ENUM(Roles)
 

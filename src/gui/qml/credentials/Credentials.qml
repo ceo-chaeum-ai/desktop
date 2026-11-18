@@ -32,11 +32,12 @@ Pane {
     default property alias content: contentLayout.data
     property alias logOutButton: logutButtonComponent
 
-    palette.window: JsonTheme.primaryBackgroundColor
-    palette.windowText: JsonTheme.primaryForegroundColor
-    palette.button: JsonTheme.primaryButtonColor.color
-    palette.buttonText: JsonTheme.primaryButtonColor.textColor
-    palette.disabled.buttonText: JsonTheme.primaryButtonColor.textColorDisabled
+    // Chaeum Drive (2026-11-18): light page that matches the main window
+    background: Rectangle {
+        color: Style.bg
+    }
+    palette.windowText: Style.text
+    font.family: "Pretendard"
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -44,16 +45,12 @@ Pane {
     Component {
         id: logutButtonComponent
 
-        Button {
+        ChaeumButton {
             id: logOutButton
             // this button is hidden when used in the wizard
             visible: credentials.isRefresh
             text: qsTr("Stay logged out")
             onClicked: credentials.logOutRequested()
-
-            palette.button: JsonTheme.secondaryButtonColor.color
-            palette.buttonText: JsonTheme.secondaryButtonColor.textColor
-            palette.disabled.buttonText: JsonTheme.secondaryButtonColor.textColorDisabled
 
             Keys.onTabPressed: event => {
                 if (!visible) {
@@ -75,24 +72,34 @@ Pane {
             Layout.alignment: Qt.AlignHCenter
             fillMode: Image.PreserveAspectFit
             source: OCUtils.resourcePath("jsontheme", "wizardLogo", true)
-            sourceSize.height: 128
-            sourceSize.width: 128
+            sourceSize.height: 72
+            sourceSize.width: 72
         }
 
         Item {
-            Layout.fillHeight: true
-            Layout.maximumHeight: 64
+            Layout.preferredHeight: 18
         }
 
         Label {
             Layout.fillWidth: true
-            text: credentials.isRefresh ? qsTr("Connecting %1 to:\n%2").arg(credentials.displayName).arg(credentials.host) : qsTr("Connecting to:\n%1").arg(credentials.host)
+            text: qsTr("Log in with your web browser")
             horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 22
+            font.weight: Font.Bold
+            color: Style.text
+        }
+
+        Label {
+            Layout.fillWidth: true
+            Layout.topMargin: 6
+            text: credentials.isRefresh ? qsTr("%1 on %2").arg(credentials.displayName).arg(credentials.host) : credentials.host
+            horizontalAlignment: Text.AlignHCenter
+            elide: Text.ElideMiddle
+            color: Style.text3
         }
 
         Item {
-            Layout.fillHeight: true
-            Layout.maximumHeight: 64
+            Layout.preferredHeight: 22
         }
 
         ColumnLayout {

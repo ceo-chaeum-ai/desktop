@@ -73,6 +73,16 @@ QIcon SpaceImage::image() const
     return _image;
 }
 
+QString SpaceImage::kind() const
+{
+    if (_space->drive().getDriveType() == personalC) {
+        return QStringLiteral("personal");
+    } else if (_space->drive().getId() == sharesIdC) {
+        return QStringLiteral("shares");
+    }
+    return QStringLiteral("project");
+}
+
 QUrl SpaceImage::qmlImageUrl() const
 {
     // while the icon is being loaded we provide a different url, qml caches the icon based on the url

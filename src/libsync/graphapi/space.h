@@ -32,6 +32,9 @@ namespace GraphApi {
     {
         Q_OBJECT
         Q_PROPERTY(QUrl qmlImageUrl READ qmlImageUrl NOTIFY imageChanged)
+        // Chaeum Drive (2026-11-18): lets the card draw its own icon when the space has no image
+        Q_PROPERTY(bool isCustom READ isCustom NOTIFY imageChanged)
+        Q_PROPERTY(QString kind READ kind NOTIFY imageChanged)
         QML_ELEMENT
         QML_UNCREATABLE("C++ only")
     public:
@@ -42,6 +45,9 @@ namespace GraphApi {
         [[nodiscard]] QIcon image() const;
 
         [[nodiscard]] QUrl qmlImageUrl() const;
+        [[nodiscard]] bool isCustom() const { return !_image.isNull(); }
+        // "personal", "shares" or "project"
+        [[nodiscard]] QString kind() const;
 
     Q_SIGNALS:
         void imageChanged();

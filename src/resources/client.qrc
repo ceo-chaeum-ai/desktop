@@ -4,5 +4,19 @@
         <file alias="resources/oauth/oauth.html.in">oauth/oauth.html.in</file>
         <file>font-awesome/Font Awesome 7 Free-Solid-900.otf</file>
         <file>remixicon/remixicon.ttf</file>
+        <file>pretendard/Pretendard-Regular.otf</file>
+        <file>pretendard/Pretendard-Medium.otf</file>
+        <file>pretendard/Pretendard-SemiBold.otf</file>
+        <file>pretendard/Pretendard-Bold.otf</file>
+        <file>chaeum/switch-on.svg</file>
+        <file>chaeum/switch-off.svg</file>
+        <file>chaeum/switch-on-disabled.svg</file>
+        <file>chaeum/switch-off-disabled.svg</file>
+        <file>chaeum/radio-on.svg</file>
+        <file>chaeum/radio-off.svg</file>
+        <file>chaeum/check-on.svg</file>
+        <file>chaeum/check-off.svg</file>
+        <file>chaeum/check-partial.svg</file>
+        <file>chaeum/chevron-down.svg</file>
     </qresource>
 </RCC>

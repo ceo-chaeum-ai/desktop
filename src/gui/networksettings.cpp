@@ -87,7 +87,7 @@ void NetworkSettings::loadMeteredSettings()
         return;
     }
 
-    _ui->pauseSyncWhenMeteredCheckbox->setVisible(false);
+    _ui->meteredRow->setVisible(false);
 }
 
 void NetworkSettings::saveBWLimitSettings()

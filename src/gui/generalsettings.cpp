@@ -23,6 +23,7 @@
 #include "gui/logbrowser.h"
 #include "gui/settingsdialog.h"
 #include "gui/translations.h"
+#include "libsync/common/version.h"
 #include "libsync/configfile.h"
 #include "libsync/theme.h"
 #include "resources/jsontheme.h"
@@ -62,9 +63,9 @@ GeneralSettings::GeneralSettings(QWidget *parent)
      */
     connect(_ui->syncHiddenFilesCheckBox, &QCheckBox::toggled, this, [](bool checked) { FolderMan::instance()->setIgnoreHiddenFiles(!checked); });
 
-    _ui->crashreporterCheckBox->setVisible(Theme::instance()->withCrashReporter());
+    _ui->crashreporterRow->setVisible(Theme::instance()->withCrashReporter());
 
-    _ui->moveToTrashCheckBox->setVisible(Theme::instance()->enableMoveToTrash());
+    _ui->moveToTrashRow->setVisible(Theme::instance()->enableMoveToTrash());
     connect(_ui->moveToTrashCheckBox, &QCheckBox::toggled, this, [this](bool checked) {
         ConfigFile().setMoveToTrash(checked);
         Q_EMIT syncOptionsChanged();
@@ -78,6 +79,8 @@ GeneralSettings::GeneralSettings(QWidget *parent)
         ocApp()->showSettings();
         logBrowser->open();
     });
+
+    _ui->versionLabel->setText(Version::displayString());
 
     connect(_ui->about_pushButton, &QPushButton::clicked, ocApp(), &Application::showAbout);
 }
@@ -138,7 +141,7 @@ void GeneralSettings::reloadConfig()
     _ui->syncHiddenFilesCheckBox->setChecked(!FolderMan::instance()->ignoreHiddenFiles());
     _ui->moveToTrashCheckBox->setChecked(ConfigFile().moveToTrash());
     if (Utility::isWindows() && Utility::isInstalledByStore()) {
-        _ui->autostartCheckBox->setVisible(false);
+        _ui->autostartRow->setVisible(false);
     } else {
         if (Utility::hasSystemLaunchOnStartup(Resources::JsonTheme::instance().applicationName())) {
             _ui->autostartCheckBox->setChecked(true);

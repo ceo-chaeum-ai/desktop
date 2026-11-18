@@ -28,26 +28,32 @@ Credentials {
 
     Label {
         Layout.alignment: Qt.AlignHCenter
+        Layout.maximumWidth: 380
         horizontalAlignment: Text.AlignHCenter
-        text: credentials.isValid ? qsTr("Log in with your web browser") : qsTr("Login failed, please try it again")
+        wrapMode: Text.WordWrap
+        color: credentials.isValid ? Style.text2 : Style.bad
+        text: credentials.isValid ? qsTr("Finish logging in in the browser window. This window continues by itself.") : qsTr("Login failed, please try it again")
     }
 
     StackLayout {
         id: stackLayout
         Layout.alignment: Qt.AlignHCenter
+        Layout.topMargin: 14
         Layout.fillWidth: false
         Layout.fillHeight: false
         currentIndex: credentials.isValid ? 0 : 1
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
-            Button {
+            spacing: 8
+            ChaeumButton {
                 id: openBrowserButton
-                Layout.maximumHeight: 42 // See https://github.com/owncloud/client/issues/11928 why we limit the height
+                Layout.preferredWidth: 260
+                Layout.preferredHeight: 40
                 property bool browserWasOpened: false
-                horizontalPadding: 64
+                primary: !browserWasOpened
                 enabled: credentials.ready
                 visible: credentials.isValid
-                icon.source: OCUtils.resourcePath("fontawesome", "", true)
+                glyph: Style.iconExternal
                 text: browserWasOpened ? qsTr("Reopen web browser") : qsTr("Open web browser")
                 onClicked: {
                     browserWasOpened = true;
@@ -58,19 +64,19 @@ Credentials {
                 }
             }
 
-            Button {
+            ChaeumButton {
                 id: copyToClipboardButton
-                Layout.preferredWidth: openBrowserButton.implicitWidth
-                Layout.maximumHeight: 42 // See https://github.com/owncloud/client/issues/11928 why we limit the height
+                Layout.preferredWidth: 260
+                Layout.preferredHeight: 40
                 visible: credentials.isValid
 
                 text: qsTr("Copy URL")
-                icon.source: OCUtils.resourcePath("fontawesome", "", true)
+                glyph: Style.iconCopy
                 onClicked: credentials.copyAuthenticationUrlToClipboard()
                 enabled: credentials.ready
 
                 hoverEnabled: true
-                ToolTip.text: copyToClipboardButton.text
+                ToolTip.text: qsTr("Copy the login address to open it in another browser")
                 ToolTip.visible: hovered
                 ToolTip.delay: 500
 
@@ -85,26 +91,29 @@ Credentials {
             }
 
             Loader {
-                Layout.preferredWidth: openBrowserButton.implicitWidth
-                Layout.maximumHeight: 42 // See https://github.com/owncloud/client/issues/11928 why we limit the height
+                Layout.preferredWidth: 260
+                Layout.preferredHeight: 40
                 Layout.alignment: Qt.AlignHCenter
                 sourceComponent: logOutButton
             }
         }
 
         ColumnLayout {
-            Button {
+            spacing: 8
+            ChaeumButton {
                 id: restartButton
                 Layout.alignment: Qt.AlignHCenter
-                Layout.preferredWidth: openBrowserButton.width
+                Layout.preferredWidth: 260
+                Layout.preferredHeight: 40
                 visible: !credentials.isValid
-                icon.source: OCUtils.resourcePath("fontawesome", "", true)
+                primary: true
+                glyph: Style.iconSync
                 text: qsTr("Restart authentication")
                 onClicked: credentials.requestRestart()
             }
             Loader {
-                Layout.preferredWidth: openBrowserButton.implicitWidth
-                Layout.maximumHeight: 42 // See https://github.com/owncloud/client/issues/11928 why we limit the height
+                Layout.preferredWidth: 260
+                Layout.preferredHeight: 40
                 Layout.alignment: Qt.AlignHCenter
                 sourceComponent: logOutButton
             }
