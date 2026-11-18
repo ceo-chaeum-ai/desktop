@@ -240,6 +240,9 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="buddy">
+                   <cstring>autostartCheckBox</cstring>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -330,6 +333,9 @@
                     <verstretch>0</verstretch>
                    </sizepolicy>
                   </property>
+                  <property name="buddy">
+                   <cstring>syncHiddenFilesCheckBox</cstring>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -382,6 +388,9 @@
                     <horstretch>1</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="buddy">
+                   <cstring>moveToTrashCheckBox</cstring>
                   </property>
                  </widget>
                 </item>
@@ -563,6 +572,9 @@
                     <horstretch>1</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
+                  </property>
+                  <property name="buddy">
+                   <cstring>crashreporterCheckBox</cstring>
                   </property>
                  </widget>
                 </item>

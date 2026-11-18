@@ -15,6 +15,7 @@
 #include <QColor>
 
 class QApplication;
+class QWidget;
 
 namespace OCC::ChaeumStyle {
 
@@ -38,5 +39,9 @@ namespace Color {
 
 // load the font, force the light scheme, set palette and style sheet
 OPENCLOUD_GUI_EXPORT void apply(QApplication *app);
+
+// a click on a label whose buddy is a check box toggles it, like the text of a plain check box
+// (settings rows show the title on the left and a text-less switch on the right)
+OPENCLOUD_GUI_EXPORT void makeBuddyLabelsClickable(QWidget *root);
 
 }

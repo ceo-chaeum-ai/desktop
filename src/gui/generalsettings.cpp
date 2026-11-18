@@ -18,6 +18,7 @@
 
 #include "common/restartmanager.h"
 #include "gui/application.h"
+#include "gui/chaeumstyle.h"
 #include "gui/folderman.h"
 #include "gui/ignorelisteditor.h"
 #include "gui/logbrowser.h"
@@ -41,6 +42,7 @@ GeneralSettings::GeneralSettings(QWidget *parent)
     , _currentlyLoading(false)
 {
     _ui->setupUi(this);
+    ChaeumStyle::makeBuddyLabelsClickable(this);
 
     reloadConfig();
     loadMiscSettings();

@@ -66,6 +66,9 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="buddy">
+         <cstring>pauseSyncWhenMeteredCheckbox</cstring>
+        </property>
        </widget>
       </item>
       <item>

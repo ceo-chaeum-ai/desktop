@@ -17,6 +17,7 @@
 #include "ui_networksettings.h"
 
 #include "accountmanager.h"
+#include "chaeumstyle.h"
 #include "configfile.h"
 #include "folderman.h"
 #include "theme.h"
@@ -31,6 +32,7 @@ NetworkSettings::NetworkSettings(QWidget *parent)
     , _ui(new Ui::NetworkSettings)
 {
     _ui->setupUi(this);
+    ChaeumStyle::makeBuddyLabelsClickable(this);
 
     setFocusProxy(_ui->pauseSyncWhenMeteredCheckbox);
     loadBWLimitSettings();

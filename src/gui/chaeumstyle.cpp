@@ -11,8 +11,11 @@
 #include "gui/chaeumstyle.h"
 
 #include <QApplication>
+#include <QCheckBox>
 #include <QFontDatabase>
+#include <QLabel>
 #include <QLoggingCategory>
+#include <QMouseEvent>
 #include <QPalette>
 #include <QQuickStyle>
 #include <QStyleFactory>
@@ -154,6 +157,32 @@ QLabel[chaeumRole="section"] { margin-top: 14px; }
     return qss;
 }
 
+class BuddyClickFilter : public QObject
+{
+public:
+    using QObject::QObject;
+
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (event->type() != QEvent::MouseButtonPress && event->type() != QEvent::MouseButtonRelease) {
+            return false;
+        }
+        auto *label = qobject_cast<QLabel *>(watched);
+        auto *mouseEvent = static_cast<QMouseEvent *>(event);
+        auto *box = label ? qobject_cast<QCheckBox *>(label->buddy()) : nullptr;
+        if (!box || !box->isEnabled() || mouseEvent->button() != Qt::LeftButton) {
+            return false;
+        }
+        // take the press so the release comes back to the label
+        if (event->type() == QEvent::MouseButtonRelease && label->rect().contains(mouseEvent->position().toPoint())) {
+            box->setFocus(Qt::MouseFocusReason);
+            box->click();
+        }
+        return true;
+    }
+};
+
 QPalette palette()
 {
     using namespace OCC::ChaeumStyle;
@@ -208,4 +237,17 @@ void OCC::ChaeumStyle::apply(QApplication *app)
     QQuickStyle::setStyle(u"Fusion"_s);
     app->setPalette(palette());
     app->setStyleSheet(styleSheet());
+}
+
+void OCC::ChaeumStyle::makeBuddyLabelsClickable(QWidget *root)
+{
+    auto *filter = new BuddyClickFilter(root);
+    for (auto *label : root->findChildren<QLabel *>()) {
+        // nested settings widgets call this too; install once per label or a click toggles twice
+        if (qobject_cast<QCheckBox *>(label->buddy()) && !label->property("chaeumBuddyClick").toBool()) {
+            label->setProperty("chaeumBuddyClick", true);
+            label->installEventFilter(filter);
+            label->setCursor(Qt::PointingHandCursor);
+        }
+    }
 }
