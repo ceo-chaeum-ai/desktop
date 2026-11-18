@@ -51,12 +51,21 @@ ProtocolWidget::ProtocolWidget(QWidget *parent)
     _sortModel->setSortRole(Models::UnderlyingDataRole);
     _ui->_tableView->setModel(_sortModel);
 
-    auto header = new ExpandingHeaderView(QStringLiteral("ActivityListHeaderV2"), _ui->_tableView);
+    auto header = new ExpandingHeaderView(QStringLiteral("ActivityListHeaderV3"), _ui->_tableView);
     _ui->_tableView->setHorizontalHeader(header);
     header->setSectionResizeMode(QHeaderView::Interactive);
     header->setExpandingColumn(static_cast<int>(ProtocolItemModel::ProtocolItemRole::File));
     header->setSortIndicator(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Time), Qt::DescendingOrder);
     header->hideSection(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Status));
+    header->setNarrowColumns({static_cast<int>(ProtocolItemModel::ProtocolItemRole::Folder)});
+
+    // with a single account the account column only repeats its name
+    auto updateAccountColumn = [header] {
+        header->setSectionHidden(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Account), AccountManager::instance()->accounts().size() <= 1);
+        header->resizeColumns();
+    };
+    connect(AccountManager::instance(), &AccountManager::accountsChanged, header, updateAccountColumn);
+    updateAccountColumn();
     header->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(header, &QHeaderView::customContextMenuRequested, header, [header, this] {
         auto menu = showFilterMenu(header, _sortModel, static_cast<int>(ProtocolItemModel::ProtocolItemRole::Account), tr("Account"));

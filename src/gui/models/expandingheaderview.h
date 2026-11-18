@@ -14,6 +14,7 @@
 #pragma once
 
 #include <QHeaderView>
+#include <QSet>
 
 namespace OCC {
 
@@ -33,6 +34,11 @@ public:
     bool resizeToContent() const;
     void setResizeToContent(bool newResizeToContent);
 
+    void setModel(QAbstractItemModel *model) override;
+
+    // columns that never grow past the default size when fitted to content (long paths)
+    void setNarrowColumns(const QSet<int> &columns);
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
 
@@ -41,6 +47,7 @@ private:
     bool _requiresReset = false;
     bool _resizeToContent = false;
     int _expandingColumn = 0;
+    QSet<int> _narrowColumns;
 };
 
 }

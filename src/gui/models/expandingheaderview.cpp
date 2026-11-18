@@ -17,6 +17,8 @@
 #include "configfile.h"
 
 #include <QApplication>
+
+#include <algorithm>
 #include <QMenu>
 
 using namespace OCC;
@@ -26,6 +28,8 @@ ExpandingHeaderView::ExpandingHeaderView(const QString &objectName, QWidget *par
 {
     setSectionsClickable(true);
     setHighlightSections(true);
+    setDefaultAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    setResizeToContent(true);
 
     connect(this, &QHeaderView::sectionCountChanged, this, [this] { resizeColumns(false); });
 
@@ -68,16 +72,33 @@ void ExpandingHeaderView::setResizeToContent(bool newResizeToContent)
     _resizeToContent = newResizeToContent;
 }
 
+void ExpandingHeaderView::setNarrowColumns(const QSet<int> &columns)
+{
+    _narrowColumns = columns;
+}
+
+void ExpandingHeaderView::setModel(QAbstractItemModel *newModel)
+{
+    QHeaderView::setModel(newModel);
+    if (newModel) {
+        // fit the columns once the first rows arrive
+        connect(newModel, &QAbstractItemModel::rowsInserted, this, [this] {
+            if (_requiresReset) {
+                resizeColumns(false);
+            }
+        });
+    }
+}
+
 void ExpandingHeaderView::resizeColumns(bool reset)
 {
     int availableWidth = width();
     const auto defaultSize = defaultSectionSize();
     if (_requiresReset && _resizeToContent) {
         // wee need some rows to adjust to the content
-        if (model()->rowCount() == 0) {
-            return;
+        if (model() && model()->rowCount() > 0) {
+            reset = true;
         }
-        reset = true;
     }
     if (reset) {
         _requiresReset = false;
@@ -90,7 +111,8 @@ void ExpandingHeaderView::resizeColumns(bool reset)
             continue;
         }
         if (reset) {
-            resizeSection(i, _resizeToContent ? sectionSize(i) : defaultSize);
+            // fit the content, but keep the expanding column (file name) the widest
+            resizeSection(i, _resizeToContent ? std::clamp(sectionSize(i), defaultSize / 2, _narrowColumns.contains(i) ? defaultSize : std::max(defaultSize, width() / 4)) : defaultSize);
         }
         availableWidth -= sectionSize(i);
     }
