@@ -125,6 +125,7 @@ QMenu::item:disabled { color: #a3adba; }
 QMenu::separator { height: 1px; background: @line; margin: 5px 6px; }
 
 QMessageBox QLabel { color: @text; }
+QDialogButtonBox { dialogbuttonbox-buttons-have-icons: 0; }
 QLabel[chaeumRole="title"] { font-size: 20px; font-weight: 700; color: @text; margin-bottom: 4px; }
 QLabel[chaeumRole="section"] { font-weight: 700; color: @text2; }
 QLabel[chaeumRole="muted"] { color: @text3; }
