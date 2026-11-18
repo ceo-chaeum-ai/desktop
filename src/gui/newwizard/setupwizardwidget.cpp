@@ -42,9 +42,8 @@ SetupWizardWidget::SetupWizardWidget(SettingsDialog *parent)
     setWindowFlag(Qt::WindowCloseButtonHint, false);
 
     _ui->setupUi(this);
-    _ui->backButton->setText(tr("Back"));
+    _ui->backButton->setText(Utility::isMac() ? tr("Back") : tr("< &Back"));
     _ui->backButton->setAccessibleName(tr("Back"));
-    _ui->cancelButton->setText(tr("Cancel"));
     _ui->cancelButton->setProperty("chaeumRole", QStringLiteral("ghost"));
     _ui->nextButton->setProperty("chaeumRole", QStringLiteral("primary"));
 
@@ -126,10 +125,10 @@ void SetupWizardWidget::displayPage(AbstractSetupWizardPage *page, SetupWizardSt
     }
 
     if (state == SetupWizardState::FinalState) {
-        _ui->nextButton->setText(tr("Finish"));
+        _ui->nextButton->setText(Utility::isMac() ? tr("Finish") : tr("&Finish"));
         _ui->nextButton->setAccessibleName(tr("Finish"));
     } else {
-        _ui->nextButton->setText(tr("Next"));
+        _ui->nextButton->setText(Utility::isMac() ? tr("Next") : tr("&Next >"));
         _ui->nextButton->setAccessibleName(tr("Next"));
     }
 

@@ -3029,31 +3029,41 @@ Note that using any logging command line options will override the settings.</so
         <translation>뒤로</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="47"/>
-        <source>Cancel</source>
-        <translation>취소</translation>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="45"/>
+        <source>&lt; &amp;Back</source>
+        <translation>뒤로(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="71"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="70"/>
         <source>Cancel Setup</source>
         <translation>설정 취소</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="72"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="71"/>
         <source>Do you really want to cancel the account setup?</source>
         <translation>계정 설정을 취소하시겠습니까?</translation>
     </message>
     <message>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="128"/>
         <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="129"/>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="130"/>
         <source>Finish</source>
         <translation>마침</translation>
     </message>
     <message>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="128"/>
+        <source>&amp;Finish</source>
+        <translation>마침(&amp;F)</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="131"/>
         <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="132"/>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="133"/>
         <source>Next</source>
         <translation>다음</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="131"/>
+        <source>&amp;Next &gt;</source>
+        <translation>다음(&amp;N)</translation>
     </message>
 </context>
 <context>
