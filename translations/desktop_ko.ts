@@ -609,7 +609,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="198"/>
         <source>&lt;p&gt;Do you really want to stop syncing the Space »%1«?&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This will &lt;b&gt;not&lt;/b&gt; delete any files.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;정말 »%1« 스페이스 동기화를 그만두시겠습니까?&lt;/p&gt;&lt;p&gt;&lt;b&gt;참고:&lt;/b&gt; 어떤 파일도 삭제되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;「%1」 스페이스의 동기화를 멈출까요?&lt;/p&gt;&lt;p&gt;PC의 파일은 지우지 않습니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="203"/>
@@ -689,7 +689,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="497"/>
         <source>&lt;p&gt;Do you really want to remove the connection to the account %1«?&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This will &lt;b&gt;not&lt;/b&gt; delete any files.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;정말 %1« 계정 연결을 제거하겠습니까?&lt;/p&gt;&lt;p&gt;&lt;b&gt;참고:&lt;/b&gt; 어떤 파일도 삭제되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;「%1」 계정 연결을 제거할까요?&lt;/p&gt;&lt;p&gt;PC의 파일은 지우지 않습니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="501"/>
@@ -793,42 +793,47 @@ The update will be performed in the background, and overwrite the current AppIma
 <context>
     <name>OCC::CommonStrings</name>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="27"/>
+        <location filename="../src/gui/commonstrings.cpp" line="24"/>
+        <source>File Explorer</source>
+        <translation>파일 탐색기</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/commonstrings.cpp" line="28"/>
         <source>file manager</source>
         <translation>파일 탐색기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="33"/>
+        <location filename="../src/gui/commonstrings.cpp" line="34"/>
         <source>Copy path to clipboard</source>
         <translation>경로 복사</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="39"/>
+        <location filename="../src/gui/commonstrings.cpp" line="40"/>
         <source>Show in %1</source>
         <translation>%1에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="41"/>
+        <location filename="../src/gui/commonstrings.cpp" line="42"/>
         <source>Show »%1« in %2</source>
         <translation>»%1«을(를) %2에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="46"/>
+        <location filename="../src/gui/commonstrings.cpp" line="47"/>
         <source>Show in web browser</source>
         <translation>웹 브라우저에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="51"/>
+        <location filename="../src/gui/commonstrings.cpp" line="52"/>
         <source>Copy URL to clipboard</source>
         <translation>URL 복사</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="56"/>
+        <location filename="../src/gui/commonstrings.cpp" line="57"/>
         <source>Copy</source>
         <translation>복사</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/gui/commonstrings.cpp" line="61"/>
+        <location filename="../src/gui/commonstrings.cpp" line="62"/>
         <source>%n Filter(s)</source>
         <translation>
             <numerusform>필터 %n개</numerusform>
@@ -929,94 +934,94 @@ The update will be performed in the background, and overwrite the current AppIma
         <location filename="../src/gui/folder.cpp" line="488"/>
         <source>»%1« and %n other file(s) have been removed.</source>
         <translation>
-            <numerusform>»%1« 및 %n개의 다른 파일(들)이 제거되었습니다.</numerusform>
+            <numerusform>「%1」 외 파일 %n개가 삭제되었습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="490"/>
         <source>»%1« has been removed.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 제거되었습니다.</translation>
+        <translation>「%1」이(가) 삭제되었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="495"/>
         <source>»%1« and %n other file(s) have been added.</source>
         <translation>
-            <numerusform>»%1« 및 %n개의 다른 파일(들)이 추가되었습니다.</numerusform>
+            <numerusform>「%1」 외 파일 %n개가 추가되었습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="497"/>
         <source>»%1« has been added.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 추가되었습니다.</translation>
+        <translation>「%1」이(가) 추가되었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="502"/>
         <source>»%1« and %n other file(s) have been updated.</source>
         <translation>
-            <numerusform>»%1« 및 %n개의 다른 파일(들)이 업데이트되었습니다.</numerusform>
+            <numerusform>「%1」 외 파일 %n개가 바뀌었습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="504"/>
         <source>»%1« has been updated.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 업데이트되었습니다.</translation>
+        <translation>「%1」이(가) 바뀌었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="509"/>
         <source>»%1« has been renamed to »%2« and %n other file(s) have been renamed.</source>
         <translation>
-            <numerusform>»%1«의 이름이 »%2«로 변경되었고, 다른 %n개의 파일(들)의 이름이 변경되었습니다.</numerusform>
+            <numerusform>「%1」의 이름이 「%2」(으)로 바뀌었고, 다른 파일 %n개도 이름이 바뀌었습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="511"/>
         <source>»%1« has been renamed to »%2«.</source>
         <comment>%1 and %2 name files.</comment>
-        <translation>»%1«의 이름이 »%2«로 변경되었습니다.</translation>
+        <translation>「%1」의 이름이 「%2」(으)로 바뀌었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="516"/>
         <source>»%1« has been moved to »%2« and %n other file(s) have been moved.</source>
         <translation>
-            <numerusform>»%1«이 »%2«로 이동되었고, 다른 %n개의 파일(들)이 이동되었습니다.</numerusform>
+            <numerusform>「%1」이(가) 「%2」(으)로 옮겨졌고, 다른 파일 %n개도 옮겨졌습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="518"/>
         <source>»%1« has been moved to »%2«.</source>
-        <translation>»%1«이 »%2«로 이동되었습니다.</translation>
+        <translation>「%1」이(가) 「%2」(으)로 옮겨졌습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="523"/>
         <source>»%1« and %n other file(s) have sync conflicts.</source>
         <translation>
-            <numerusform>»%1« 및 %n개의 다른 파일(들)에 동기화 충돌이 있습니다.</numerusform>
+            <numerusform>「%1」 외 파일 %n개에 동기화 충돌이 있습니다.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="525"/>
         <source>»%1« has a sync conflict. Please check the conflict file!</source>
-        <translation>»%1«에 동기화 충돌이 있습니다. 충돌 파일을 확인하세요!</translation>
+        <translation>「%1」에 동기화 충돌이 있습니다. 충돌 파일을 확인하세요.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="530"/>
         <source>»%1« and %n other file(s) could not be synced due to errors. See the log for details.</source>
         <translation>
-            <numerusform>»%1« 및 다른 %n개의 파일(들)을 오류로 인해 동기화할 수 없습니다. 자세한 내용은 로그를 참조하세요.</numerusform>
+            <numerusform>오류로 「%1」 외 파일 %n개를 동기화하지 못했습니다. 자세한 내용은 기록 파일을 보세요.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="532"/>
         <source>»%1« could not be synced due to an error. See the log for details.</source>
-        <translation>오류로 인해 »%1«을 동기화할 수 없습니다. 자세한 내용은 로그를 참조하세요.</translation>
+        <translation>오류로 「%1」을(를) 동기화하지 못했습니다. 자세한 내용은 기록 파일을 보세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="538"/>
         <source>Sync Activity</source>
-        <translation>동기화 활성화</translation>
+        <translation>동기화 소식</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="740"/>
@@ -1356,7 +1361,7 @@ This means that the synchronization client might not upload local changes immedi
         <location filename="../src/gui/generalsettings.ui" line="375"/>
         <location filename="../src/gui/generalsettings.ui" line="391"/>
         <source>Move remotely deleted files to the local trash bin instead of deleting them</source>
-        <translation>원격에서 삭제된 파일을 삭제하는 대신 로컬 휴지통으로 이동</translation>
+        <translation>서버에서 지운 파일을 PC 휴지통으로 보내기</translation>
     </message>
     <message>
         <location filename="../src/gui/generalsettings.ui" line="444"/>
@@ -1716,109 +1721,109 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OCC::OAuth</name>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="352"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="353"/>
         <source>Error returned from the server: &lt;em&gt;%1&lt;/em&gt;</source>
         <translation>서버로부터 에러 반환됨: &lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="354"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="355"/>
         <source>There was an error accessing the &apos;token&apos; endpoint: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</source>
         <translation>&apos;token&apos; 엔드포인트에 접근하는 중 오류가 발생했습니다: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="356"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="357"/>
         <source>Could not parse the JSON returned from the server: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</source>
         <translation>서버에서 반환된 JSON을 파싱할 수 없습니다: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="358"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="359"/>
         <source>Unsupported token type: %1</source>
         <translation>지원되지 않는 토큰 유형: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="360"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="361"/>
         <source>The reply from the server did not contain all expected fields
 :%1</source>
         <translation>서버의 응답에 예상된 모든 필드가 포함되지 않았습니다
 :%1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="362"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="363"/>
         <source>Unknown Error</source>
         <translation>알 수 없는 오류</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="365"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="366"/>
         <source>The id_token could not be parsed</source>
         <translation>id_token을 해석할 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="375"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="376"/>
         <source>&lt;h1&gt;Incorrect user&lt;/h1&gt;&lt;p&gt;You logged-in as user &lt;em&gt;%1&lt;/em&gt;, but must login with user &lt;em&gt;%2&lt;/em&gt;.&lt;br&gt;Please return to the %3 and restart the authentication.&lt;/p&gt;</source>
         <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;사용자 &lt;em&gt;%1&lt;/em&gt;로 로그인했지만, 사용자 &lt;em&gt;%2&lt;/em&gt;로 로그인해야 합니다.&lt;br&gt;%3으로 돌아가서 다시 로그인 하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="380"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="381"/>
         <source>&lt;h1&gt;Incorrect user&lt;/h1&gt;&lt;p&gt;You logged-in as a different user than is associated with this account.&lt;br&gt;Please return to the %1 and restart the authentication.&lt;/p&gt;</source>
         <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;이 계정에 연결된 사용자로 로그인하지 않았습니다.&lt;br&gt;%1으로 돌아가서 다시 로그인 하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="385"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="386"/>
         <source>Incorrect user</source>
         <translation>잘못된 사용자</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="399"/>
-        <source>&lt;h1&gt;Login successful&lt;/h1&gt;&lt;p&gt;You can close this window.&lt;/p&gt;</source>
-        <translation>&lt;h1&gt;로그인 성공&lt;/h1&gt;&lt;p&gt;이 창을 닫아도 됩니다.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../src/libsync/creds/oauth.cpp" line="400"/>
-        <source>Login successful</source>
-        <translation>로그인 성공</translation>
+        <source>&lt;h1&gt;Login successful&lt;/h1&gt;&lt;p&gt;You can close this window.&lt;/p&gt;</source>
+        <translation>&lt;h1&gt;로그인했습니다&lt;/h1&gt;&lt;p&gt;이 창을 닫고 채움드라이브로 돌아가세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="563"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="401"/>
+        <source>Login successful</source>
+        <translation>로그인했습니다</translation>
+    </message>
+    <message>
+        <location filename="../src/libsync/creds/oauth.cpp" line="564"/>
         <source>WebFinger response had unexpected content type: %1</source>
         <translation>WebFinger 응답의 형식이 예상과 다릅니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="573"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="574"/>
         <source>Could not parse WebFinger response: %1</source>
         <translation>WebFinger 응답을 해석할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="581"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="582"/>
         <source>WebFinger response subject did not match the requested resource</source>
         <translation>WebFinger 응답의 subject가 요청한 리소스와 다릅니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="593"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="594"/>
         <source>WebFinger response did not contain an OpenID Connect issuer</source>
         <translation>WebFinger 응답에 OpenID Connect issuer가 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="600"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="601"/>
         <source>WebFinger issuer link had no href</source>
         <translation>WebFinger issuer 링크에 href가 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="685"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="686"/>
         <source>Could not parse OIDC discovery response: %1</source>
         <translation>OIDC discovery 응답을 해석할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="339"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="340"/>
         <source>Login Error</source>
         <translation>로그인 에러</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="367"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="368"/>
         <source>The audience of the id_token did not contain &quot;%1&quot;</source>
         <translation>id_token의 대상(audience)에 &quot;%1&quot;이(가) 포함되지 않았습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="339"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="340"/>
         <source>&lt;h1&gt;Login Error&lt;/h1&gt;&lt;p&gt;%1&lt;/p&gt;</source>
         <translation>&lt;h1&gt;로그인 오류&lt;/h1&gt;&lt;p&gt;%1&lt;/p&gt;</translation>
     </message>
