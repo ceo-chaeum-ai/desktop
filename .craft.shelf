@@ -15,7 +15,7 @@ version = ui-revamp
 version = master
 
 [dev-utils/7zip-base]
-version = 26.05
+version = 26.06
 
 [dev-utils/cmake]
 version = latest
@@ -51,7 +51,7 @@ version = 5.44.0
 version = 3.0.5
 
 [dev-utils/snoretoast]
-version = 0.9.1
+version = 0.9.3
 
 [kde/frameworks/extra-cmake-modules]
 version = 6.31.0
