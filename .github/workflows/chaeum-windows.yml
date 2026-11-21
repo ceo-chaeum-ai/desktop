@@ -1,4 +1,5 @@
-# 채움드라이브 Windows 판(서명 없음, NSIS 설치본)과 Microsoft Store 묶음(MSIX). (주)채움에이아이가 2026-11-16 main.yml 을 바탕으로 더함.
+# 채움드라이브 Microsoft Store 묶음(MSIX)과 portable zip. (주)채움에이아이가 2026-11-16 main.yml 을 바탕으로 더함.
+# 2026-11-21: 서명 없는 NSIS 설치본을 걷음(배포는 Store 판 하나). portable zip 은 Qt(LGPL-3) DLL 을 바꿔 끼울 수 있는 판으로 GitHub Release 에만 둔다.
 # 2026-11-18: Store 묶음을 더함. store 결과물(.msixupload)을 Partner Center 에 올리면 Store 가 서명한다.
 # test 결과물은 같은 MSIX 를 시험용 자체 인증서로 서명한 것과 그 인증서(.cer)다. 시험 PC 의 LocalMachine\TrustedPeople 에 인증서를 넣은 뒤 깐다.
 # 원본 main.yml 은 그대로 두고, 이 갈래는 이 워크플로만 쓴다.
@@ -58,7 +59,6 @@ jobs:
         New-Item -ItemType Directory "${env:GITHUB_WORKSPACE}/binaries/"
         & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --set "srcDir=${env:GITHUB_WORKSPACE}" opencloud/opencloud-desktop
         & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --set "buildNumber=${{ github.run_number }}" opencloud/opencloud-desktop
-        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c dev-utils/nsis
 
     - name: Install dependencies
       run: |
@@ -67,10 +67,6 @@ jobs:
     - name: Build
       run: |
         & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache opencloud/opencloud-desktop
-
-    - name: Package (NSIS installer)
-      run: |
-        & "${env:GITHUB_WORKSPACE}/.github/workflows/.craft.ps1" -c --no-cache --package --options "[Packager]PackageType=NullsoftInstallerPackager" opencloud/opencloud-desktop
 
     - name: Package (portable zip)
       run: |
