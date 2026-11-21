@@ -1,3 +1,4 @@
+# Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 include(ECMAddAppIcon)
 
 find_package(KDSingleApplication-qt6 1.0.0 REQUIRED)

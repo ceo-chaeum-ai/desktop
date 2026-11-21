@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 #include "accountconfiguredwizardpage.h"
 
 #include "gui/fonticonmessagebox.h"

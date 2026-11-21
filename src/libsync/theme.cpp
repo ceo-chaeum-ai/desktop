@@ -146,12 +146,15 @@ QString Theme::aboutVersions(Theme::VersionFormat format) const
 QString Theme::about() const
 {
     // Modified by ChaeumAI Inc. on 2026-11-16: distributor and source location of Chaeum Drive.
+    // Modified by ChaeumAI Inc. on 2026-11-21: GPL notices (license files, written source offer).
     return tr("<p>Version %1. Based on OpenCloud Desktop.</p>"
-              "<p>Source code: <a href=\"https://github.com/ceo-chaeum-ai/desktop\">GitHub</a></p>"
               "<p>Copyright ChaeumAI Inc. (modifications)<br/>"
               "Copyright OpenCloud GmbH<br/>"
               "Copyright ownCloud GmbH</p>"
-              "<p>Distributed by ChaeumAI Inc. and licensed under the GNU General Public License (GPL) Version 2.0.<br/>"
+              "<p>Distributed by ChaeumAI Inc. under the GNU General Public License (GPL) version 2 or later, without any warranty. "
+              "The license texts and third-party notices are in the licenses folder of the installation.</p>"
+              "<p>Source code of this version: <a href=\"https://github.com/ceo-chaeum-ai/desktop/releases\">GitHub</a>. "
+              "For three years after distribution we will also send the complete source code to anyone who asks (support@chaeumai.com).</p>"
               "<p><small>%2</small></p>")
         .arg(Utility::escape(Version::displayString()), aboutVersions(Theme::VersionFormat::RichText));
 }

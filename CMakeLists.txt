@@ -1,3 +1,4 @@
+# Modified by ChaeumAI Inc. (2026-11-16) for Chaeum Drive. See CHAEUM-CHANGES.md.
 cmake_minimum_required(VERSION 3.18)
 
 include(VERSION.cmake)

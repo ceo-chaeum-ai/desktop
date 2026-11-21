@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
+<!-- Modified by ChaeumAI Inc. (2026-11-18 to 2026-11-21) for Chaeum Drive. See CHAEUM-CHANGES.md. -->
 <TS version="2.1" language="ko">
 <context>
     <name>AccountBar</name>
@@ -2785,8 +2786,8 @@ Note that using any logging command line options will override the settings.</so
     <name>OCC::Theme</name>
     <message>
         <location filename="../src/libsync/theme.cpp" line="149"/>
-        <source>&lt;p&gt;Version %1. Based on OpenCloud Desktop.&lt;/p&gt;&lt;p&gt;Source code: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (modifications)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;Distributed by ChaeumAI Inc. and licensed under the GNU General Public License (GPL) Version 2.0.&lt;br/&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;버전 %1. OpenCloud Desktop을 바탕으로 만들었습니다.&lt;/p&gt;&lt;p&gt;소스 코드: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (수정분)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;ChaeumAI Inc.가 배포하며 GNU General Public License(GPL) 2.0에 따라 이용할 수 있습니다.&lt;br/&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</translation>
+        <source>&lt;p&gt;Version %1. Based on OpenCloud Desktop.&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (modifications)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;Distributed by ChaeumAI Inc. under the GNU General Public License (GPL) version 2 or later, without any warranty. The license texts and third-party notices are in the licenses folder of the installation.&lt;/p&gt;&lt;p&gt;Source code of this version: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop/releases&quot;&gt;GitHub&lt;/a&gt;. For three years after distribution we will also send the complete source code to anyone who asks (support@chaeumai.com).&lt;/p&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;버전 %1. OpenCloud Desktop을 바탕으로 만들었습니다.&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (수정분)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;ChaeumAI Inc.가 배포하며 GNU General Public License(GPL) 2.0 이상에 따라 이용할 수 있습니다. 어떠한 보증도 하지 않습니다. 라이선스 전문과 함께 쓴 구성 요소의 고지는 설치 폴더의 licenses 폴더에 있습니다.&lt;/p&gt;&lt;p&gt;이 판의 소스 코드: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop/releases&quot;&gt;GitHub&lt;/a&gt;. 배포 뒤 3년 동안은 요청하는 누구에게나 전체 소스 코드를 보내 드립니다(support@chaeumai.com).&lt;/p&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>

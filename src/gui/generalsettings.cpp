@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18 to 2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Daniel Molkentin <danimo@owncloud.com>
  *

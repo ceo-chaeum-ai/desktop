@@ -1,3 +1,4 @@
+/* Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md. */
 /*
     Chaeum Drive (2026-11-18): light wizard that matches the main window.
     Pages are drawn on the window background; fonts and controls come from the application style sheet.
