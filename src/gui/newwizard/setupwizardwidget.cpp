@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18 to 2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 #include "setupwizardwidget.h"
 
 #include "ui_setupwizardwidget.h"
@@ -44,6 +45,25 @@ SetupWizardWidget::SetupWizardWidget(SettingsDialog *parent)
     _ui->setupUi(this);
     _ui->backButton->setText(Utility::isMac() ? tr("Back") : tr("< &Back"));
     _ui->backButton->setAccessibleName(tr("Back"));
+    _ui->cancelButton->setProperty("chaeumRole", QStringLiteral("ghost"));
+    _ui->nextButton->setProperty("chaeumRole", QStringLiteral("primary"));
+
+    // Chaeum Drive (2026-11-18): steps on top, content in the middle, buttons at the bottom
+    _ui->bottomButtonsLayout->removeWidget(_ui->navigation);
+    _ui->verticalLayout->insertWidget(0, _ui->navigation, 0, Qt::AlignHCenter);
+    _ui->verticalLayout->setStretch(0, 0);
+    _ui->verticalLayout->setStretch(1, 1);
+    _ui->verticalLayout->setStretch(2, 0);
+    _ui->verticalLayout->setContentsMargins(32, 22, 32, 20);
+    _ui->verticalLayout->setSpacing(12);
+    _ui->verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+    _ui->bottomButtonsLayout->setContentsMargins(0, 8, 0, 0);
+    _ui->bottomButtonsLayout->setSpacing(8);
+    // the two spacers around the navigation are now next to each other, one is enough
+    if (auto *spacer = _ui->horizontalSpacer_2) {
+        _ui->bottomButtonsLayout->removeItem(spacer);
+        delete spacer;
+    }
 
     slotHideErrorMessageWidget();
 
@@ -85,7 +105,7 @@ SetupWizardWidget::SetupWizardWidget(SettingsDialog *parent)
     loadStylesheet();
 
     _ui->transitionProgressIndicator->setFixedSize(32, 32);
-    _ui->transitionProgressIndicator->setColor(Resources::JsonTheme::instance().primaryForegroundColor());
+    _ui->transitionProgressIndicator->setColor(QColor(0x25, 0x63, 0xeb));
 }
 
 void SetupWizardWidget::loadStylesheet()
@@ -106,11 +126,11 @@ void SetupWizardWidget::displayPage(AbstractSetupWizardPage *page, SetupWizardSt
     }
 
     if (state == SetupWizardState::FinalState) {
-        _ui->nextButton->setText(Utility::isMac() ? tr("Done") : tr("&Finish"));
-        _ui->nextButton->setAccessibleName(Utility::isMac() ? tr("Done") : tr("Finish"));
+        _ui->nextButton->setText(Utility::isMac() ? tr("Finish") : tr("&Finish"));
+        _ui->nextButton->setAccessibleName(tr("Finish"));
     } else {
-        _ui->nextButton->setText(Utility::isMac() ? tr("Continue") : tr("&Next >"));
-        _ui->nextButton->setAccessibleName(Utility::isMac() ? tr("Continue") : tr("Next"));
+        _ui->nextButton->setText(Utility::isMac() ? tr("Next") : tr("&Next >"));
+        _ui->nextButton->setAccessibleName(tr("Next"));
     }
 
     _currentPage = page;

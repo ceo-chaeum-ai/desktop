@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Daniel Molkentin <danimo@owncloud.com>
  *
@@ -47,7 +48,7 @@ Q_LOGGING_CATEGORY(lcSettingsDialog, "gui.settingsdialog", QtInfoMsg);
 namespace {
 auto minimumSizeHint(const QWidget *w)
 {
-    const QSize min { 800, 700 }; // When changing this, please check macOS: widgets there have larger insets, so they take up more space.
+    const QSize min { 880, 600 }; // When changing this, please check macOS: widgets there have larger insets, so they take up more space.
     const auto screen = w->windowHandle() ? w->windowHandle()->screen() : QApplication::screenAt(QCursor::pos());
     if (screen) {
         const auto availableSize = screen->availableSize();
@@ -114,8 +115,8 @@ SettingsDialog::SettingsDialog(QWidget *parent)
     // People perceive this as a Window, so also make Ctrl+W work
     addAction(tr("Hide"), Qt::CTRL | Qt::Key_W, this, &SettingsDialog::hide);
 
-    // TODO: fix sizing
-    _ui->quickWidget->setFixedHeight(minimumHeight() * 0.13);
+    // Chaeum Drive: navigation sidebar on the left
+    _ui->quickWidget->setFixedWidth(236);
     _ui->quickWidget->engine()->addImageProvider(QStringLiteral("avatar"), new AvatarImageProvider);
     _ui->quickWidget->setOCContext(QUrl(QStringLiteral("qrc:/qt/qml/eu/OpenCloud/gui/qml/AccountBar.qml")), this);
     connect(

@@ -38,6 +38,7 @@
 #endif
 
 #include <QApplication>
+#include "gui/chaeumstyle.h"
 #include <QCommandLineParser>
 #include <QLibraryInfo>
 #include <QMessageBox>
@@ -463,6 +464,7 @@ int main(int argc, char **argv)
         NetworkInformation::instance(); //
 
         platform->setApplication(&app);
+        ChaeumStyle::apply(&app);
 
         auto folderManager = FolderMan::createInstance();
 

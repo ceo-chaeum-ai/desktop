@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18 to 2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Daniel Molkentin <danimo@owncloud.com>
  *
@@ -17,6 +18,7 @@
 #include "ui_networksettings.h"
 
 #include "accountmanager.h"
+#include "chaeumstyle.h"
 #include "configfile.h"
 #include "folderman.h"
 #include "theme.h"
@@ -31,6 +33,7 @@ NetworkSettings::NetworkSettings(QWidget *parent)
     , _ui(new Ui::NetworkSettings)
 {
     _ui->setupUi(this);
+    ChaeumStyle::makeBuddyLabelsClickable(this);
 
     setFocusProxy(_ui->pauseSyncWhenMeteredCheckbox);
     loadBWLimitSettings();
@@ -87,7 +90,7 @@ void NetworkSettings::loadMeteredSettings()
         return;
     }
 
-    _ui->pauseSyncWhenMeteredCheckbox->setVisible(false);
+    _ui->meteredRow->setVisible(false);
 }
 
 void NetworkSettings::saveBWLimitSettings()

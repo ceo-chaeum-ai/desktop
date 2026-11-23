@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 #include "gui/newwizard/navigation.h"
 
 #include <QHBoxLayout>
@@ -18,10 +19,15 @@ void Navigation::setEntries(const QList<SetupWizardState> &newEntries)
     // current active page is also lost that way
     removeAllItems();
 
+    // Chaeum Drive (2026-11-18): numbered step pills, drawn by the application style sheet
+    layout()->setContentsMargins(0, 0, 0, 0);
+    layout()->setSpacing(6);
+    int number = 0;
     for (const auto state : newEntries) {
-        const QString text = Utility::enumToDisplayName(state);
+        const QString text = QStringLiteral("%1  %2").arg(QString::number(++number), Utility::enumToDisplayName(state));
 
         auto newButton = new QRadioButton(text, this);
+        newButton->setProperty("chaeumRole", QStringLiteral("step"));
 
         _entries.insert(state, newButton);
         layout()->addWidget(newButton);

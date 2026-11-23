@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Hannah von Reth <hannah.vonreth@owncloud.com>
  *
@@ -19,6 +20,8 @@ import eu.OpenCloud.gui 1.0
 import eu.OpenCloud.libsync 1.0
 import eu.OpenCloud.resources 1.0
 
+// Chaeum Drive: the navigation is a sidebar on the left (ChaeumAI Inc., 2026-11-18).
+// Same entries as the original top bar: accounts, add account, activity, settings, theme url buttons, quit.
 Pane {
     id: bar
     readonly property SettingsDialog settingsDialog: ocContext
@@ -28,6 +31,12 @@ Pane {
 
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+
+    padding: 10
+    topPadding: 8
+    background: Rectangle {
+        color: Style.side
+    }
 
     Component.onCompleted: {
         if (OCUtils.compareQVersion(6, 8, 3) >= 0) {
@@ -51,32 +60,87 @@ Pane {
         }
     }
 
-    RowLayout {
+    component SectionLabel: Label {
+        Layout.fillWidth: true
+        Layout.leftMargin: 10
+        Layout.topMargin: 10
+        Layout.bottomMargin: 4
+        color: Style.text3
+        font.pointSize: 8.5
+        font.weight: Font.DemiBold
+    }
+
+    ColumnLayout {
         anchors.fill: parent
+        spacing: 2
 
         // don't modify the enabled state directly as it messes with the palette in Qt 6.7.2
         opacity: widget.enabled ? 1.0 : 0.5
+
+        SectionLabel {
+            text: qsTr("Accounts")
+        }
 
         Repeater {
             id: accountButtons
 
             model: AccountManager.accounts
 
-            delegate: AccountButton {
+            delegate: NavButton {
+                id: accountButton
                 property AccountState accountState: modelData
+                readonly property bool hasAvatar: accountState.account.hasAvatar
 
                 Layout.fillWidth: true
-                Layout.fillHeight: true
-                Layout.maximumWidth: widthHint
                 Accessible.role: Accessible.PageTab
                 checked: settingsDialog.currentAccount === accountState.account
-                icon.source: accountState.account.hasAvatar ? OCUtils.avatarPath(accountState.account.uid, enabled) : undefined
-                icon.cache: false
-                altText: accountState.account.initials
-                text: accountState.account.hostName
-                gradient: accountState.account.avatarGradient
+                text: accountState.account.davDisplayName !== "" ? accountState.account.davDisplayName : accountState.account.hostName
+                subtitle: accountState.account.hostName
 
-                hoverEnabled: true
+                leading: Component {
+                    Item {
+                        Rectangle {
+                            anchors.fill: parent
+                            radius: width / 2
+                            color: Style.brandSoft
+                            visible: !accountButton.hasAvatar
+                            Label {
+                                anchors.centerIn: parent
+                                text: accountButton.accountState.account.initials
+                                color: Style.brandSoftText
+                                font.pointSize: 8
+                                font.weight: Font.Bold
+                            }
+                        }
+                        Image {
+                            id: avatarImage
+                            anchors.fill: parent
+                            visible: accountButton.hasAvatar
+                            cache: false
+                            source: accountButton.hasAvatar ? OCUtils.avatarPath(accountButton.accountState.account.uid, true) : ""
+                            sourceSize.width: 56
+                            sourceSize.height: 56
+                            Connections {
+                                target: accountButton.accountState.account
+                                function onAvatarChanged() {
+                                    avatarImage.source = "";
+                                    if (accountButton.accountState.account.hasAvatar) {
+                                        avatarImage.source = OCUtils.avatarPath(accountButton.accountState.account.uid, true);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                trailing: Component {
+                    Rectangle {
+                        implicitWidth: 8
+                        implicitHeight: 8
+                        radius: 4
+                        color: accountButton.accountState.state === AccountState.Connected ? Style.okDot : "#c0c8d3"
+                    }
+                }
+
                 ToolTip.visible: hovered
                 ToolTip.text: accountState.account.davDisplayName + "\n" + accountState.account.url
                 ToolTip.delay: 500
@@ -84,16 +148,6 @@ Pane {
                 Accessible.name: accountState.account.displayNameWithHost
                 Accessible.onPressAction: {
                     clicked();
-                }
-
-                Connections {
-                    target: accountState.account
-                    function onAvatarChanged() {
-                        icon.source = undefined;
-                        if (accountState.account.hasAvatar) {
-                            icon.source = OCUtils.avatarPath(accountState.account.uid, enabled);
-                        }
-                    }
                 }
 
                 Keys.onBacktabPressed: event => {
@@ -109,12 +163,11 @@ Pane {
                 }
             }
         }
-        AccountButton {
+        NavButton {
             id: addAccountButton
 
-            Layout.fillHeight: true
-            Layout.maximumWidth: widthHint
-            icon.source: OCUtils.resourcePath("fontawesome", "+", enabled)
+            Layout.fillWidth: true
+            glyph: Style.iconAdd
             text: qsTr("Add Account")
             visible: JsonTheme.multiAccount || AccountManager.accounts.length === 0
 
@@ -130,38 +183,43 @@ Pane {
                 settingsDialog.addAccount();
             }
         }
-        Item {
-            // spacer
+
+        Rectangle {
             Layout.fillWidth: true
+            Layout.leftMargin: 10
+            Layout.rightMargin: 10
+            Layout.topMargin: 10
+            Layout.bottomMargin: 10
+            implicitHeight: 1
+            color: Style.lineStrong
         }
-        AccountButton {
+
+        NavButton {
             id: logButton
 
-            Layout.fillHeight: true
-            Layout.maximumWidth: widthHint
+            Layout.fillWidth: true
             Accessible.role: Accessible.PageTab
             Accessible.onPressAction: {
                 clicked();
             }
             checked: settingsDialog.currentPage === SettingsDialog.Activity
-            icon.source: OCUtils.resourcePath("fontawesome", "", enabled)
+            glyph: Style.iconActivity
             text: qsTr("Activity")
 
             onClicked: {
                 settingsDialog.currentPage = SettingsDialog.Activity;
             }
         }
-        AccountButton {
+        NavButton {
             id: settingsButton
 
-            Layout.fillHeight: true
-            Layout.maximumWidth: widthHint
+            Layout.fillWidth: true
             Accessible.role: Accessible.PageTab
             Accessible.onPressAction: {
                 clicked();
             }
             checked: settingsDialog.currentPage === SettingsDialog.Settings
-            icon.source: OCUtils.resourcePath("fontawesome", "", enabled)
+            glyph: Style.iconSettings
             text: qsTr("Settings")
 
             onClicked: {
@@ -172,13 +230,19 @@ Pane {
             // branded buttons with a URL
             model: JsonTheme.urlButtons
 
-            delegate: AccountButton {
+            delegate: NavButton {
                 required property int index
                 required property urlButton modelData
 
-                Layout.fillHeight: true
-                Layout.maximumWidth: widthHint
-                icon.source: OCUtils.resourcePath("urlbutton", index, enabled)
+                Layout.fillWidth: true
+                leading: Component {
+                    Image {
+                        source: OCUtils.resourcePath("urlbutton", index, true)
+                        sourceSize.width: 36
+                        sourceSize.height: 36
+                        fillMode: Image.PreserveAspectFit
+                    }
+                }
                 text: modelData.text
 
                 onClicked: {
@@ -186,12 +250,15 @@ Pane {
                 }
             }
         }
-        AccountButton {
+        Item {
+            // spacer
+            Layout.fillHeight: true
+        }
+        NavButton {
             id: quitButton
 
-            Layout.fillHeight: true
-            Layout.maximumWidth: widthHint
-            icon.source: OCUtils.resourcePath("fontawesome", "", enabled)
+            Layout.fillWidth: true
+            glyph: Style.iconPower
             text: qsTr("Quit")
 
             Keys.onTabPressed: {

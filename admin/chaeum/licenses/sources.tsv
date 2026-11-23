@@ -1,0 +1,125 @@
+component	version	license	source_url	note
+brotli	1.2.1	MIT	https://github.com/google/brotli/blob/v1.2.1/LICENSE	
+cairo	1.18.4	LGPL-2.1-only OR MPL-1.1	https://gitlab.freedesktop.org/cairo/cairo/-/raw/1.18.4/COPYING	
+cairo	1.18.4	LGPL-2.1-only OR MPL-1.1	https://gitlab.freedesktop.org/cairo/cairo/-/raw/1.18.4/src/cairo.h	
+freetype	2.14.1	FTL OR GPL-2.0-or-later	https://github.com/freetype/freetype/blob/VER-2-14-1/LICENSE.TXT	
+freetype	2.14.1	FTL	https://github.com/freetype/freetype/blob/VER-2-14-1/docs/FTL.TXT	
+gettext	1.0	LGPL-2.1-or-later AND GPL-3.0-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-runtime/COPYING)	
+gettext	1.0	LGPL-2.1-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-runtime/intl/libgnuintl.in.h)	
+gettext	1.0	LGPL-2.1-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-runtime/libasprintf/autosprintf.cc)	
+gettext	1.0	LGPL-2.1-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-runtime/intl-csharp/intl.cs)	
+gettext	1.0	GPL-3.0-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-tools/libgettextpo/gettext-po.in.h)	
+gettext	1.0	GPL-3.0-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/libtextstyle/lib/textstyle.h)	
+gettext	1.0	GPL-3.0-or-later	https://ftp.gnu.org/gnu/gettext/gettext-1.0.tar.xz (gettext-1.0/gettext-tools/src/message.h)	
+iconv	0.0.10	Public domain	https://github.com/KDE/craft-blueprints-kde (libs/_windows/iconv/iconv.py, defaultTarget)	version source: Craft blueprint, not the binary
+iconv	0.0.10	Public domain	https://github.com/win-iconv/win-iconv/blob/v0.0.10/readme.txt	
+giflib	5.2.1	MIT	https://sourceforge.net/p/giflib/code/ci/5.2.1/tree/COPYING?format=raw (identical to giflib-5.2.1.tar.gz COPYING)	
+glib	2.89.0	LGPL-2.1-or-later	https://gitlab.gnome.org/GNOME/glib/-/raw/2.89.0/COPYING	
+glib	2.89.0	LGPL-2.1-or-later	https://gitlab.gnome.org/GNOME/glib/-/raw/2.89.0/glib/glib.h	
+harfbuzz	11.2.0	MIT-Modern-Variant	https://github.com/harfbuzz/harfbuzz/blob/11.2.0/COPYING	
+icu	78.3	Unicode-3.0 AND others	https://github.com/unicode-org/icu/blob/release-78.3/LICENSE	
+kdsingleapplication	1.2.0	MIT	https://github.com/KDAB/KDSingleApplication/blob/v1.2.0/LICENSE.txt	
+kdsingleapplication	1.2.0	MIT	https://github.com/KDAB/KDSingleApplication/blob/v1.2.0/src/kdsingleapplication.h	
+kdsingleapplication	1.2.0	MIT	https://github.com/KDAB/KDSingleApplication/blob/v1.2.0/LICENSES/MIT.txt	
+libb2	0.98.1	CC0-1.0	https://github.com/BLAKE2/libb2/blob/v0.98.1/COPYING	
+bzip2	1.0.8	bzip2-1.0.6	https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz (bzip2-1.0.8/LICENSE)	
+libffi	3.8.0	MIT	https://github.com/libffi/libffi/blob/v3.8.0/LICENSE	
+libjpeg-turbo	3.2.0	IJG AND BSD-3-Clause AND Zlib	https://github.com/libjpeg-turbo/libjpeg-turbo/blob/3.2.0/LICENSE.md	
+libjpeg-turbo	3.2.0	IJG	https://github.com/libjpeg-turbo/libjpeg-turbo/blob/3.2.0/README.ijg	
+xz	5.8.4	0BSD	https://github.com/tukaani-project/xz/blob/v5.8.4/COPYING	
+xz	5.8.4	0BSD	https://github.com/tukaani-project/xz/blob/v5.8.4/COPYING.0BSD	
+libpng	1.6.45	libpng-2.0	https://github.com/pnggroup/libpng/blob/v1.6.45/LICENSE	
+libspng	0.7.4	BSD-2-Clause	https://github.com/randy408/libspng/blob/v0.7.4/LICENSE	
+libunistring	1.4.2	LGPL-3.0-or-later OR GPL-2.0-or-later	https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.2.tar.xz (libunistring-1.4.2/README)	
+libunistring	1.4.2	LGPL-3.0-or-later OR GPL-2.0-or-later	https://ftp.gnu.org/gnu/libunistring/libunistring-1.4.2.tar.xz (libunistring-1.4.2/lib/unistr.in.h)	
+libxml2	2.14.5	MIT	https://gitlab.gnome.org/GNOME/libxml2/-/raw/v2.14.5/Copyright	
+libxml2	2.14.5	ISC-like	https://gitlab.gnome.org/GNOME/libxml2/-/raw/v2.14.5/dict.c	
+libxml2	2.14.5	ISC-like	https://gitlab.gnome.org/GNOME/libxml2/-/raw/v2.14.5/list.c	
+zstd	1.5.7	BSD-3-Clause	https://github.com/facebook/zstd/blob/v1.5.7/LICENSE	
+openssl	3.6.5	Apache-2.0	https://github.com/openssl/openssl/blob/openssl-3.6.5/LICENSE.txt	word-for-word the Apache-2.0 terms; Apache-2.0.txt in this folder
+openssl	3.6.5	Apache-2.0	https://github.com/openssl/openssl/blob/openssl-3.6.5/README.md	
+pcre2	10.44	BSD-3-Clause WITH PCRE2-exception	https://github.com/PCRE2Project/pcre2/blob/pcre2-10.44/LICENCE	
+pixman	0.46.4	MIT	https://gitlab.freedesktop.org/pixman/pixman/-/raw/pixman-0.46.4/COPYING	
+sqlite	3.50.4	blessing	https://github.com/sqlite/sqlite/blob/version-3.50.4/LICENSE.md	
+tiff	4.7.1	libtiff	https://gitlab.com/libtiff/libtiff/-/raw/v4.7.1/LICENSE.md	
+webp	1.6.0	BSD-3-Clause	https://github.com/webmproject/libwebp/blob/v1.6.0/COPYING	
+webp	1.6.0	BSD-3-Clause (patent grant)	https://github.com/webmproject/libwebp/blob/v1.6.0/PATENTS	
+zlib	1.3.1	Zlib	https://github.com/madler/zlib/blob/v1.3.1/LICENSE	
+snoretoast	0.9.3	LGPL-3.0-or-later	https://github.com/KDE/snoretoast/blob/v0.9.3/src/main.cpp	
+snoretoast	0.9.3	LGPL-3.0-or-later	https://github.com/KDE/snoretoast/blob/v0.9.3/COPYING.LGPL-3	COPYING.LGPL-3 is the standard LGPL-3.0 text; LGPL-3.0.txt in this folder
+qtkeychain	0.16.0	BSD-3-Clause	https://github.com/frankosterfeld/qtkeychain/blob/0.16.0/qtkeychain/keychain.h	
+qtkeychain	0.16.0	BSD-3-Clause	https://github.com/frankosterfeld/qtkeychain/blob/0.16.0/COPYING	
+libre-graph-api-cpp-qt-client	1.0.8	Apache-2.0	https://github.com/opencloud-eu/libre-graph-api-cpp-qt-client/blob/v1.0.8/LICENSE	word-for-word the Apache-2.0 text; Apache-2.0.txt in this folder
+qt	6.11.3	LGPL-3.0-only	https://github.com/qt/qtbase/blob/v6.11.3/src/corelib/global/qglobal.h	
+qt	6.11.3	LGPL-3.0-only	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/LGPL-3.0-only.txt	same as LGPL-3.0.txt here except the FSF URL (http vs https)
+qt/d3d12memoryallocator	f128d39b7a95b4235bd228d231646278dc6c24b2	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/D3D12MemoryAllocator/LICENSE.txt	
+qt/vulkanmemoryallocator	3.2.1	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/VulkanMemoryAllocator/LICENSE.txt	
+qt/blake2	ed1974ea83433eba7b2d95c5dcd9ac33cb847913	CC0-1.0 OR Apache-2.0	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/blake2/COPYING	Qt bundled copy not used (system library); notice in Part A
+qt/doubleconversion	3.4.0	BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/double-conversion/LICENSE	
+qt/easing	(not stated)	BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/easing/LICENSE	
+qt/emoji-segmenter	0.4.0	Apache-2.0	/usr/share/common-licenses/Apache-2.0	standard text
+qt/freetype	2.15.0	FTL OR GPL-2.0-only	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/freetype/LICENSE.txt	Qt bundled copy not used (system library); notice in Part A
+qt/freetype-zlib	(not stated)	Zlib	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/freetype/ZLIB-LICENSE.txt	Qt bundled copy not used (system library); notice in Part A
+qt/freetype-bdf	(not stated)	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/freetype/BDF-LICENSE.txt	Qt bundled copy not used (system library); notice in Part A
+qt/freetype-pcf	(not stated)	MIT AND MIT-open-group	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/freetype/PCF-LICENSE.txt	Qt bundled copy not used (system library); notice in Part A
+qt/harfbuzz-ng	14.6.0	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/harfbuzz-ng/COPYING	Qt bundled copy not used (system library); notice in Part A
+qt/icc-srgb-color-profile	(not stated)	LicenseRef-ICC-License	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/icc/LICENSE.txt	
+qt/libjpeg	3.2.0	IJG AND BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/libjpeg/LICENSE	Qt bundled copy not used (system library); notice in Part A
+qt/libpng	1.6.59	Libpng AND libpng-2.0	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/libpng/LICENSE	Qt bundled copy not used (system library); notice in Part A
+qt/psl-data	2026-05-14_08-35-31_UTC	MPL-2.0	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/libpsl/PSL-LICENSE.txt	standard MPL-2.0 text; MPL-2.0.txt
+qt/libpsl	664f3dc85259ec65e30248a61fa1c45b7b0e4c3f	BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/libpsl/src/LICENSE.chromium	
+qt/md4	(not stated)	CC0-1.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/CC0-1.0.txt	standard CC0-1.0 text, given once in Part A (libb2)
+qt/md4c	0.6.0	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/md4c/LICENSE.md	
+qt/md5	(not stated)	CC0-1.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/CC0-1.0.txt	standard CC0-1.0 text, given once in Part A (libb2)
+qt/pcre2	10.49	LicenseRef-BSD-3-Clause-with-PCRE2-Binary-Like-Packages-Exception	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/pcre2/LICENCE.md	Qt bundled copy not used (system library); notice in Part A
+qt/pcre2-sljit	10.49	BSD-2-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/pcre2/LICENSE-SLJIT	Qt bundled copy not used (system library); notice in Part A
+qt/pixman	0.17.12	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/pixman/LICENSE	
+qt/rfc6234	(not stated)	BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/rfc6234/LICENSE	
+qt/sha1	(not stated)	LicenseRef-SHA1-Public-Domain	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/LicenseRef-SHA1-Public-Domain.txt	
+qt/sha3_endian	1.0.0	BSD-2-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/sha3/BRG_ENDIAN_LICENSE	
+qt/sha3_keccak	3.2	CC0-1.0	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/sha3/CC0_LICENSE	standard CC0-1.0 text, given once in Part A (libb2)
+qt/siphash	(not stated)	CC0-1.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/CC0-1.0.txt	standard CC0-1.0 text, given once in Part A (libb2)
+qt/sqlite	3.54.0	blessing	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/sqlite/qt_attribution.json	Qt bundled copy not used (system library); notice in Part A
+qt/tinycbor	7.0	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/tinycbor/LICENSE	
+qt/wintab	(not stated)	LicenseRef-Lcs-Telegraphics	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/LicenseRef-Lcs-Telegraphics.txt	
+qt/zlib	1.3.2	Zlib	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/zlib/LICENSE	Qt bundled copy not used (system library); notice in Part A
+qt/tlexpected	41d3e1f48d682992a2230b2a715bca38b848b269	CC0-1.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/CC0-1.0.txt	standard CC0-1.0 text, given once in Part A (libb2)
+qt/tika-mimetypes	c29724782854bb5a319f4a1940d0828a58ace3f9	Apache-2.0	/usr/share/common-licenses/Apache-2.0	standard text
+qt/unicode-character-database	36	Unicode-3.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/Unicode-3.0.txt	
+qt/unicode-cldr	v48.2	Unicode-3.0	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/Unicode-3.0.txt	
+qt/libdbus-1-headers	1.13.12	AFL-2.1 OR GPL-2.0-or-later	https://github.com/qt/qtbase/blob/v6.11.3/src/dbus/LICENSE.LIBDBUS-1.txt	AFL-2.1 part reproduced; GPL-2.0 text replaced by reference (OR)
+qt/opengl-headers	Revision 27684	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/opengl/LICENSE.KHRONOS.txt	
+qt/opengl-es2-headers	Revision 27673	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/opengl/LICENSE.KHRONOS.txt	
+qt/grayraster	(not stated)	FTL OR GPL-2.0-only	https://github.com/qt/qtbase/blob/v6.11.3/src/3rdparty/freetype/LICENSE.txt	FTL text given once in Part A (FreeType)
+qt/smooth-scaling-algorithm	(not stated)	BSD-2-Clause AND Imlib2	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/painting/LICENSE.QIMAGETRANSFORM.txt	
+qt/xserverhelper	(not stated)	X11 AND HPND	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/painting/LICENSE.XCONSORTIUM.txt	
+qt/rhi-miniengine-d3d12-mipmap	0aa79bad78992da0b6a8279ddb9002c1753cb849	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/rhi/LICENSE.MiniEngine.txt	
+qt/aglfn	1.7	BSD-3-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/text/LICENSE.AGLFN.txt	
+qt/vulkan-xml-spec	1.4.308	Apache-2.0 OR MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/gui/vulkan/LICENSE.txt	MIT part reproduced; Apache part omitted (OR)
+qt/catch2	2.13.10	BSL-1.0	https://github.com/qt/qtbase/blob/v6.11.3/src/testlib/3rdparty/catch2/LICENSE.txt	
+qt/cycle	3.3.11	MIT	https://github.com/qt/qtbase/blob/v6.11.3/src/testlib/3rdparty/cycle/LICENSE.txt	
+qt/valgrind	3.25.1	BSD-4-Clause	https://github.com/qt/qtbase/blob/v6.11.3/src/testlib/3rdparty/valgrind/LICENSE.txt	
+qt/webgradients	(not stated)	MIT	https://github.com/qt/qtbase/blob/v6.11.3/util/gradientgen/LICENSE.WEBGRADIENTS.txt	
+qt/masm	(not stated)	BSD-2-Clause	https://github.com/qt/qtdeclarative/blob/v6.11.3/src/3rdparty/masm/LICENSE	
+qt/yoga	2.0.1	MIT	https://github.com/qt/qtdeclarative/blob/v6.11.3/src/3rdparty/yoga/LICENSE	
+qt/shadow_angular_material	(not stated)	MIT	https://github.com/qt/qtdeclarative/blob/v6.11.3/src/quickcontrols/material/LICENSE.ANGULARJS.txt	
+qt/libtiff	4.7.2	libtiff	https://github.com/qt/qtimageformats/blob/v6.11.3/src/3rdparty/libtiff/COPYRIGHT	Qt bundled copy not used (system library); notice in Part A
+qt/libwebp	1.6.0	BSD-3-Clause	https://github.com/qt/qtimageformats/blob/v6.11.3/src/3rdparty/libwebp/COPYING	Qt bundled copy not used (system library); notice in Part A
+qt/spirvcross	998146d76fc5cbb2726f44c55e25fa28a573a782	Apache-2.0 AND LicenseRef-MIT-Khronos-old	https://github.com/qt/qtshadertools/blob/v6.11.3/src/3rdparty/SPIRV-Cross/COPYRIGHT.txt	copyright file
+qt/spirvcross	998146d76fc5cbb2726f44c55e25fa28a573a782	Apache-2.0 AND LicenseRef-MIT-Khronos-old	https://github.com/qt/qtbase/blob/v6.11.3/LICENSES/MIT-Khronos-old.txt	
+qt/glslang	16.1.0	BSD-3-Clause AND LicenseRef-MIT-Khronos-old AND Apache-2.0 AND GPL-3.0-or-later WITH Bison-exception-2.2 AND AML-glslang	https://github.com/qt/qtshadertools/blob/v6.11.3/src/3rdparty/glslang/COPYRIGHT.txt	copyright file
+qt/glslang	16.1.0	BSD-3-Clause AND LicenseRef-MIT-Khronos-old AND Apache-2.0 AND GPL-3.0-or-later WITH Bison-exception-2.2 AND AML-glslang	https://github.com/qt/qtshadertools/blob/v6.11.3/src/3rdparty/glslang/LICENSE.txt	embedded Apache-2.0 and GPL-3.0 full texts replaced by references
+qt/xsvg	(not stated)	HPND-sell-variant	https://github.com/qt/qtsvg/blob/v6.11.3/src/svg/LICENSE.XSVG.txt	
+expat	2.7.3	MIT	https://github.com/libexpat/libexpat/blob/R_2_7_3/expat/COPYING	
+lcms2	2.17	MIT	https://github.com/mm2/Little-CMS/blob/lcms2.17/LICENSE	
+openjpeg	2.5.3	BSD-2-Clause	https://github.com/uclouvain/openjpeg/blob/v2.5.3/LICENSE	
+fmt	12.2.0	MIT	https://github.com/fmtlib/fmt/blob/12.2.0/LICENSE	
+spdlog	1.17.0	MIT	https://github.com/gabime/spdlog/blob/v1.17.0/LICENSE	
+QProgressIndicator	in-tree	MIT	https://github.com/opencloud-eu/desktop/blob/main/src/3rdparty/QProgressIndicator/LICENSE	copied from the local application source tree (src/3rdparty/QProgressIndicator/LICENSE)
+msvc-runtime	(Visual Studio redistributable)	Microsoft Visual Studio redistribution terms		no license text reproduced
+(full text) GPL-2.0.txt	-	GPL-2.0	/usr/share/common-licenses/GPL-2 (Ubuntu)	copied verbatim
+(full text) GPL-3.0.txt	-	GPL-3.0	/usr/share/common-licenses/GPL-3 (Ubuntu)	copied verbatim
+(full text) LGPL-2.1.txt	-	LGPL-2.1	/usr/share/common-licenses/LGPL-2.1 (Ubuntu)	copied verbatim
+(full text) LGPL-3.0.txt	-	LGPL-3.0	/usr/share/common-licenses/LGPL-3 (Ubuntu)	copied verbatim
+(full text) Apache-2.0.txt	-	Apache-2.0	/usr/share/common-licenses/Apache-2.0 (Ubuntu)	copied verbatim
+(full text) MPL-2.0.txt	-	MPL-2.0	/usr/share/common-licenses/MPL-2.0 (Ubuntu)	copied verbatim

@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Klaas Freitag <freitag@owncloud.com>
  *
@@ -217,11 +218,20 @@ IssuesWidget::IssuesWidget(QWidget *parent)
     _statusSortModel->setFilterKeyColumn(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Status));
     _ui->_tableView->setModel(_statusSortModel);
 
-    auto header = new ExpandingHeaderView(QStringLiteral("ActivityErrorListHeaderV2"), _ui->_tableView);
+    auto header = new ExpandingHeaderView(QStringLiteral("ActivityErrorListHeaderV3"), _ui->_tableView);
     _ui->_tableView->setHorizontalHeader(header);
     header->setSectionResizeMode(QHeaderView::Interactive);
     header->setExpandingColumn(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Action));
     header->setSortIndicator(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Time), Qt::DescendingOrder);
+    header->setNarrowColumns({static_cast<int>(ProtocolItemModel::ProtocolItemRole::Folder), static_cast<int>(ProtocolItemModel::ProtocolItemRole::File)});
+
+    // with a single account the account column only repeats its name
+    auto updateAccountColumn = [header] {
+        header->setSectionHidden(static_cast<int>(ProtocolItemModel::ProtocolItemRole::Account), AccountManager::instance()->accounts().size() <= 1);
+        header->resizeColumns();
+    };
+    connect(AccountManager::instance(), &AccountManager::accountsChanged, header, updateAccountColumn);
+    updateAccountColumn();
 
     connect(_ui->_tableView, &QTreeView::customContextMenuRequested, this, &IssuesWidget::slotItemContextMenu);
     _ui->_tableView->horizontalHeader()->setContextMenuPolicy(Qt::CustomContextMenu);

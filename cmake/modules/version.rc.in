@@ -1,4 +1,5 @@
-// Modified by ChaeumAI Inc. on 2026-11-16: company, product name and description for Chaeum Drive.
+// Modified by ChaeumAI Inc. on 2026-11-16 and 2026-11-21: company, product name and description for Chaeum Drive.
+#pragma code_page(65001)
 #include <winresrc.h>
 
 VS_VERSION_INFO VERSIONINFO
@@ -16,14 +17,14 @@ VS_VERSION_INFO VERSIONINFO
     BEGIN
         BLOCK "StringFileInfo"
         BEGIN
-            BLOCK "040904E4"
+            BLOCK "040904B0"
             BEGIN
                 VALUE "CompanyName", "ChaeumAI Inc.\0"
                 VALUE "LegalCopyright", "Copyright (C) 2026 ChaeumAI Inc. (modifications)\r\nCopyright (C) 2025-@MIRALL_VERSION_YEAR@ OpenCloud GmbH\r\nCopyright (C) 2014-@MIRALL_VERSION_YEAR@ ownCloud GmbH\0"
                 VALUE "FileVersion", "@MIRALL_VERSION_FULL@\0"
                 VALUE "Comments", "@MIRALL_VERSION_STRING@\0"
-                VALUE "FileDescription", "Chaeum Drive (based on OpenCloud Desktop)\0"
-                VALUE "ProductName", "Chaeum Drive\0"
+                VALUE "FileDescription", "채움드라이브\0"
+                VALUE "ProductName", "채움드라이브\0"
                 VALUE "ProductVersion", "@MIRALL_VERSION_STRING@\0"
             END
         END

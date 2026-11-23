@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 #include "gui/newwizard/pages/serverurlsetupwizardpage.h"
 #include "gui/newwizard/ui_serverurlsetupwizardpage.h"
 
@@ -63,7 +64,12 @@ ServerUrlSetupWizardPage::ServerUrlSetupWizardPage(const QUrl &serverUrl)
     }
 
     _ui->logoLabel->setText(QString());
-    _ui->logoLabel->setPixmap(Resources::JsonTheme::instance().wizardLogo().pixmap(200, 200));
+    _ui->logoLabel->setPixmap(Resources::JsonTheme::instance().wizardLogo().pixmap(88, 88));
+    // Chaeum Drive (2026-11-18): plain title and field label instead of a greeting and a question
+    _ui->welcomeTextLabel->setText(tr("Connect to %1").arg(Resources::JsonTheme::instance().applicationDisplayName()));
+    _ui->serverUrlLabel->setText(tr("Server address"));
+    _ui->urlLineEdit->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+    _ui->urlLineEdit->setPlaceholderText(QStringLiteral("https://"));
     //: This is the accessibility text for the logo in the setup wizard page. The parameter is the name for the (branded) application.
     _ui->logoLabel->setAccessibleName(tr("%1 logo").arg(Resources::JsonTheme::instance().applicationDisplayName()));
 

@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Olivier Goffart <ogoffart@woboq.com>
  *
@@ -65,8 +66,9 @@ QString renderHttpTemplate(const QString &title, const QString &content)
             {"TITLE", title}, //
             {"CONTENT", content}, //
             {"ICON", loadFile(QStringLiteral(":/client/OpenCloud/theme/universal/wizard_logo.svg"))}, //
-            {"BACKGROUND_COLOR", Resources::JsonTheme::instance().primaryBackgroundColor().name()}, //
-            {"FONT_COLOR", Resources::JsonTheme::instance().primaryForegroundColor().name()}, //
+            // Chaeum Drive (2026-11-18): light page with the bundled Pretendard web font
+            {"FONT_REGULAR", loadFile(QStringLiteral(":/client/pretendard/Pretendard-Regular.subset.woff2"))}, //
+            {"FONT_BOLD", loadFile(QStringLiteral(":/client/pretendard/Pretendard-Bold.subset.woff2"))}, //
         });
 }
 

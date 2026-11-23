@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 #include "accountconfiguredwizardpage.h"
 
 #include "gui/fonticonmessagebox.h"
@@ -64,6 +65,27 @@ AccountConfiguredWizardPage::AccountConfiguredWizardPage(const QString &defaultS
     // toggle once to have the according handlers set up the initial UI state
     _ui->advancedConfigGroupBox->setChecked(true);
     _ui->advancedConfigGroupBox->setChecked(false);
+
+    // Chaeum Drive (2026-11-18): the two choices are the whole page, so they are always shown
+    _ui->advancedConfigGroupBox->setChecked(true);
+    _ui->advancedConfigGroupBox->setCheckable(false);
+    _ui->advancedConfigGroupBox->setTitle(QString());
+    _ui->advancedConfigGroupBox->setFixedWidth(520);
+    // keep the title next to the choices and centre the whole block
+    _ui->verticalSpacer_2->changeSize(10, 12, QSizePolicy::Minimum, QSizePolicy::Fixed);
+    _ui->verticalLayout->addStretch(1);
+    _ui->horizontalLayout->setContentsMargins(0, 0, 0, 0);
+    _ui->verticalLayout_4->setContentsMargins(0, 0, 0, 0);
+    _ui->verticalLayout_4->setSpacing(12);
+    _ui->syncModeGroupBox->setFlat(false);
+    _ui->localDirectoryGroupBox->setFlat(false);
+    _ui->localDirectoryGroupBox->setStyleSheet(QString());
+    _ui->verticalLayout->setAlignment(_ui->advancedConfigGroupBox, Qt::AlignHCenter);
+    _ui->youreAllSetLabel->setText(tr("How to sync"));
+    _ui->label->setText(tr("Spaces"));
+    _ui->chooseLocalDownloadDirectoryLabel->setText(tr("Folder on this computer"));
+    _ui->label->setProperty("chaeumRole", QStringLiteral("section"));
+    _ui->chooseLocalDownloadDirectoryLabel->setProperty("chaeumRole", QStringLiteral("section"));
 
     // allows resetting local directory to default value once changed
     _ui->resetLocalDirectoryButton->setIcon(Resources::FontIcon(u''));

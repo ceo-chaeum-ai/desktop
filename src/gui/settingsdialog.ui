@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md. -->
 <ui version="4.0">
  <class>OCC::SettingsDialog</class>
  <widget class="QMainWindow" name="OCC::SettingsDialog">
@@ -33,7 +34,7 @@
     <item>
      <widget class="QStackedWidget" name="dialogStack">
       <widget class="QWidget" name="page">
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="verticalLayout_2">
         <property name="spacing">
          <number>0</number>
         </property>

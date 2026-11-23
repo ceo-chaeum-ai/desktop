@@ -1,43 +1,61 @@
 <!DOCTYPE html>
+<!-- Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md. -->
 
-<html lang="en">
+<html lang="ko">
 
 <head>
+<meta charset="utf-8">
 <title>@{TITLE}</title>
 <style>
+@font-face { font-family: Pretendard; font-weight: 400; src: url(data:font/woff2;base64,@{FONT_REGULAR}) format("woff2"); }
+@font-face { font-family: Pretendard; font-weight: 700; src: url(data:font/woff2;base64,@{FONT_BOLD}) format("woff2"); }
+
 html, body {
     height: 100%;
-    width: 100%;
     margin: 0;
 }
 
 body {
-    background-color: @{BACKGROUND_COLOR};
-    color: @{FONT_COLOR};
-    font-family: OpenCloud, "Noto Sans", OpenSans, Verdana, Helvetica, Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1f2937;
+    font-family: Pretendard, "Malgun Gothic", system-ui, sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-}
-
-.content {
+.card {
+    background: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 16px;
+    padding: 40px 56px;
     text-align: center;
+    max-width: 420px;
+}
+
+.card img {
+    width: 72px;
+    height: 72px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 0 8px;
+}
+
+p {
+    font-size: 15px;
+    color: #5b6778;
+    margin: 0;
+    line-height: 1.6;
 }
 </style>
 </head>
 
 <body>
-<div class="row">
-    <div class="content">
-        <img src="data:image/svg+xml;base64,@{ICON}" />
-        @{CONTENT}
-    </div>
+<div class="card">
+    <img src="data:image/svg+xml;base64,@{ICON}" alt="" />
+    @{CONTENT}
 </div>
 </body>

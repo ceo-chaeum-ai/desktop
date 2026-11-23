@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Klaas Freitag <freitag@kde.org>
  *
@@ -39,6 +40,67 @@ Q_LOGGING_CATEGORY(lcFolderStatus, "gui.folder.model", QtInfoMsg)
 namespace {
     // minimum delay between progress updates
     constexpr auto progressUpdateTimeOutC = 1s;
+
+    // Chaeum Drive: one word kind for the colour of the card and a readable state (2026-11-18)
+    SyncResult::Status effectiveStatus(Folder *f)
+    {
+        auto status = f->syncResult().status();
+        if (!f->accountState()->isConnected()) {
+            return SyncResult::Offline;
+        } else if (f->isSyncPaused() || NetworkInformation::instance()->isBehindCaptivePortal() || NetworkInformation::instance()->isMetered()) {
+            return SyncResult::Paused;
+        }
+        return status;
+    }
+
+    QString statusKind(Folder *f)
+    {
+        switch (effectiveStatus(f)) {
+        case SyncResult::Success:
+            return f->syncResult().hasUnresolvedConflicts() ? QStringLiteral("problem") : QStringLiteral("ok");
+        case SyncResult::SyncRunning:
+            return QStringLiteral("sync");
+        case SyncResult::Paused:
+            return QStringLiteral("paused");
+        case SyncResult::Offline:
+            return QStringLiteral("offline");
+        case SyncResult::Problem:
+            return QStringLiteral("problem");
+        case SyncResult::Error:
+        case SyncResult::SetupError:
+            return QStringLiteral("error");
+        case SyncResult::Undefined:
+        case SyncResult::Queued:
+            break;
+        }
+        return QStringLiteral("waiting");
+    }
+
+    QString statusText(Folder *f)
+    {
+        switch (effectiveStatus(f)) {
+        case SyncResult::Success:
+            return f->syncResult().hasUnresolvedConflicts() ? FolderStatusModel::tr("Has conflicts") : FolderStatusModel::tr("Up to date");
+        case SyncResult::SyncRunning:
+            return FolderStatusModel::tr("Syncing");
+        case SyncResult::Paused:
+            if (f->isSyncPaused()) {
+                return FolderStatusModel::tr("Paused");
+            }
+            return NetworkInformation::instance()->isMetered() ? FolderStatusModel::tr("Paused on metered connection") : FolderStatusModel::tr("Paused");
+        case SyncResult::Offline:
+            return FolderStatusModel::tr("Disconnected");
+        case SyncResult::Problem:
+            return FolderStatusModel::tr("Some files not synced");
+        case SyncResult::Error:
+        case SyncResult::SetupError:
+            return FolderStatusModel::tr("Sync error");
+        case SyncResult::Undefined:
+        case SyncResult::Queued:
+            break;
+        }
+        return FolderStatusModel::tr("Waiting to sync");
+    }
 
     QChar statusIconName(Folder *f)
     {
@@ -300,6 +362,21 @@ QVariant FolderStatusModel::data(const QModelIndex &index, int role) const
     }
     case Roles::Folder:
         return QVariant::fromValue(f);
+    case Roles::StatusKind:
+        return statusKind(f);
+    case Roles::StatusText:
+        return statusText(f);
+    case Roles::LocalPath:
+        return f->shortGuiLocalPath();
+    case Roles::QuotaFraction: {
+        if (auto *space = f->space()) {
+            const auto quota = space->drive().getQuota();
+            if (quota.isValid() && quota.getTotal() > 0) {
+                return double(quota.getUsed()) / double(quota.getTotal());
+            }
+        }
+        return -1.0;
+    }
     case Roles::AccessibleDescriptionRole: {
         QStringList desc = {f->displayName(), Utility::enumToDisplayName(f->syncResult().status())};
         desc << getErrors();
@@ -340,6 +417,10 @@ QHash<int, QByteArray> FolderStatusModel::roleNames() const
         {static_cast<int>(Roles::Quota), "quota"},
         {static_cast<int>(Roles::Folder), "folder"},
         {static_cast<int>(Roles::AccessibleDescriptionRole), "accessibleDescription"},
+        {static_cast<int>(Roles::StatusKind), "statusKind"},
+        {static_cast<int>(Roles::StatusText), "statusText"},
+        {static_cast<int>(Roles::LocalPath), "localPath"},
+        {static_cast<int>(Roles::QuotaFraction), "quotaFraction"},
     };
 }
 

@@ -1,6 +1,7 @@
+# Modified by ChaeumAI Inc. (2026-11-16 to 2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 [General]
 version = 2
-blueprintrepositories = https://github.com/ceo-chaeum-ai/craft-blueprints-opencloud.git|chaeum|;https://github.com/KDE/craft-blueprints-kde.git|master|
+blueprintrepositories = https://github.com/ceo-chaeum-ai/craft-blueprints-opencloud.git|ui-revamp|;https://github.com/KDE/craft-blueprints-kde.git|master|
 
 [core/cacert]
 version = 2026-10-20
@@ -9,7 +10,7 @@ version = 2026-10-20
 version = master
 
 [craft/craft-blueprints-opencloud]
-version = chaeum
+version = ui-revamp
 
 [craft/craft-core]
 version = master

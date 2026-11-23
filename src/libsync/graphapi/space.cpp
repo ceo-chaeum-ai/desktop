@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Hannah von Reth <hannah.vonreth@owncloud.com>
  *
@@ -71,6 +72,16 @@ QIcon SpaceImage::image() const
         return Resources::FontIcon(Resources::FontIcon::FontFamily::RemixIcon, u'', Resources::FontIcon::Size::Half);
     }
     return _image;
+}
+
+QString SpaceImage::kind() const
+{
+    if (_space->drive().getDriveType() == personalC) {
+        return QStringLiteral("personal");
+    } else if (_space->drive().getId() == sharesIdC) {
+        return QStringLiteral("shares");
+    }
+    return QStringLiteral("project");
 }
 
 QUrl SpaceImage::qmlImageUrl() const

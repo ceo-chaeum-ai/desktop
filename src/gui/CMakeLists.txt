@@ -1,3 +1,4 @@
+# Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 include(ECMAddAppIcon)
 
 find_package(KDSingleApplication-qt6 1.0.0 REQUIRED)
@@ -16,6 +17,7 @@ add_library(OpenCloudGui SHARED)
 
 target_sources(OpenCloudGui PRIVATE
     aboutdialog.ui
+    chaeumstyle.cpp
     accountsettings.ui
     generalsettings.ui
     ignorelisteditor.ui
@@ -100,6 +102,7 @@ target_link_libraries(OpenCloudGui
 )
 
 apply_common_target_settings(OpenCloudGui)
+set_source_files_properties(qml/Style.qml PROPERTIES QT_QML_SINGLETON_TYPE TRUE)
 ecm_add_qml_module(OpenCloudGui
         URI eu.OpenCloud.gui
         VERSION 1.0
@@ -108,6 +111,9 @@ ecm_add_qml_module(OpenCloudGui
         QML_FILES
             qml/AccountBar.qml
             qml/AccountButton.qml
+            qml/NavButton.qml
+            qml/ChaeumButton.qml
+            qml/Style.qml
             qml/FolderDelegate.qml
             qml/FolderError.qml
 

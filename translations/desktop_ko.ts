@@ -1,30 +1,38 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ko">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<!-- Modified by ChaeumAI Inc. (2026-11-18 to 2026-11-21) for Chaeum Drive. See CHAEUM-CHANGES.md. -->
+<TS version="2.1" language="ko">
 <context>
     <name>AccountBar</name>
     <message>
-        <location filename="../src/gui/qml/AccountBar.qml" line="27"/>
+        <location filename="../src/gui/qml/AccountBar.qml" line="29"/>
         <source>Navigation bar</source>
         <translation>네비게이션 바</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/AccountBar.qml" line="118"/>
+        <location filename="../src/gui/qml/AccountBar.qml" line="80"/>
+        <source>Accounts</source>
+        <translation>계정</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/qml/AccountBar.qml" line="170"/>
         <source>Add Account</source>
         <translation>계정 추가</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/AccountBar.qml" line="148"/>
+        <location filename="../src/gui/qml/AccountBar.qml" line="206"/>
         <source>Activity</source>
         <translation>활동</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/AccountBar.qml" line="165"/>
+        <location filename="../src/gui/qml/AccountBar.qml" line="222"/>
         <source>Settings</source>
         <translation>설정</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/AccountBar.qml" line="195"/>
+        <location filename="../src/gui/qml/AccountBar.qml" line="261"/>
         <source>Quit</source>
-        <translation>나가기</translation>
+        <translation>종료</translation>
     </message>
 </context>
 <context>
@@ -42,27 +50,27 @@
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="140"/>
         <source>Configure files download:</source>
-        <translation>파일 다운로드 구성:</translation>
+        <translation>파일 다운로드 방식:</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="147"/>
         <source>Synchronize all existing spaces</source>
-        <translation>모든 기존 공간을 동기화합니다</translation>
+        <translation>지금 있는 스페이스 모두 동기화</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="157"/>
         <source>After completing this wizard, you can set up folder synchronization manually.</source>
-        <translation>이 설정 마법사를 완료한 후, 폴더 동기화를 수동으로 설정할 수 있습니다.</translation>
+        <translation>마법사를 마친 뒤 앱 창의 「스페이스 추가」로 하나씩 연결할 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="160"/>
         <source>Configure synchronization manually</source>
-        <translation>동기화를 수동으로 설정</translation>
+        <translation>나중에 직접 고르기</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="200"/>
         <source>Choose local download directory:</source>
-        <translation>다운로드할 로컬 디렉터리를 선택하세요.</translation>
+        <translation>다운로드할 PC 폴더:</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.ui" line="223"/>
@@ -102,60 +110,60 @@
 <context>
     <name>CommandLine</name>
     <message>
-        <location filename="../src/gui/main.cpp" line="101"/>
+        <location filename="../src/gui/main.cpp" line="103"/>
         <source>%1 version %2<byte value="xd"/>
 File synchronization desktop utility.</source>
         <translation>%1 버전 %2
-파일 동기화 데스크탑 유틸리티입니다.</translation>
+파일 동기화 데스크톱 유틸리티입니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="106"/>
+        <location filename="../src/gui/main.cpp" line="108"/>
         <source>For more information, see %1</source>
         <comment>link to homepage</comment>
-        <translation>자세한 내용은 %1을/를 참조하세요.</translation>
+        <translation>자세한 내용은 %1을(를) 참조하세요.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="124"/>
+        <location filename="../src/gui/main.cpp" line="126"/>
         <source>Start with the main window visible, or if it is already running, bring it to the front. By default, the client launches in the background.</source>
         <translation>메인 창을 표시하며 시작하거나, 이미 실행 중인 경우 창을 앞으로 가져옵니다. 기본적으로 클라이언트는 백그라운드에서 시작됩니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="126"/>
+        <location filename="../src/gui/main.cpp" line="128"/>
         <source>Quit the running instance.</source>
-        <translation>실행중인 인스턴스를 종료하세요.</translation>
+        <translation>실행 중인 인스턴스를 종료합니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="128"/>
+        <location filename="../src/gui/main.cpp" line="130"/>
         <source>Write log to file (use - to write to stdout).</source>
         <translation>로그를 파일로 기록합니다 (-를 사용하면 표준 출력으로 출력됩니다).</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="130"/>
+        <location filename="../src/gui/main.cpp" line="132"/>
         <source>Write each sync log output in a new file in folder.</source>
         <translation>각 동기화 로그 출력을 해당 폴더에 새로운 파일로 기록합니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="131"/>
+        <location filename="../src/gui/main.cpp" line="133"/>
         <source>Flush the log file after every write.</source>
         <translation>쓰기 후 로그 파일 플러시.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="132"/>
+        <location filename="../src/gui/main.cpp" line="134"/>
         <source>Output debug-level messages in the log.</source>
         <translation>로그에 디버그 수준 메시지를 출력합니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="133"/>
+        <location filename="../src/gui/main.cpp" line="135"/>
         <source>Enable debug mode.</source>
-        <translation>디버그 모드를 활성</translation>
+        <translation>디버그 모드를 켭니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="134"/>
+        <location filename="../src/gui/main.cpp" line="136"/>
         <source>Forward all arguments to the cmd client. This argument must be the first.</source>
         <translation>모든 인수를 cmd 클라이언트로 전달하세요. 이 인수는 첫 번째 인수여야 합니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="150"/>
+        <location filename="../src/gui/main.cpp" line="152"/>
         <source>--logfile and --logdir are mutually exclusive</source>
         <translation>--logfile과 --logdir은 상호 배타적입니다.</translation>
     </message>
@@ -163,23 +171,19 @@ File synchronization desktop utility.</source>
 <context>
     <name>Credentials</name>
     <message>
-        <location filename="../src/gui/qml/credentials/Credentials.qml" line="51"/>
+        <location filename="../src/gui/qml/credentials/Credentials.qml" line="52"/>
         <source>Stay logged out</source>
         <translation>로그아웃 유지</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/Credentials.qml" line="89"/>
-        <source>Connecting %1 to:
-%2</source>
-        <translation>%1을(를) 다음에 연결 중입니다: 
-%2</translation>
+        <location filename="../src/gui/qml/credentials/Credentials.qml" line="85"/>
+        <source>Log in with your web browser</source>
+        <translation>브라우저에서 로그인</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/Credentials.qml" line="89"/>
-        <source>Connecting to:
-%1</source>
-        <translation>다음으로 연결합니다:
-%1</translation>
+        <location filename="../src/gui/qml/credentials/Credentials.qml" line="95"/>
+        <source>%1 on %2</source>
+        <translation>%1 · %2</translation>
     </message>
 </context>
 <context>
@@ -209,84 +213,90 @@ File synchronization desktop utility.</source>
 <context>
     <name>FolderDelegate</name>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="32"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="43"/>
         <source>Folder Sync</source>
         <translation>폴더 동기화</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="81"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="127"/>
+        <source>Spaces</source>
+        <translation>스페이스</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="134"/>
+        <source>%1 of %2 synced</source>
+        <translation>%2개 중 %1개 연결됨</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="172"/>
         <source>Manage Account</source>
         <translation>계정 관리</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="92"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="186"/>
         <source>Log in</source>
         <translation>로그인</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="92"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="186"/>
         <source>Log out</source>
         <translation>로그아웃</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="96"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="191"/>
         <source>Reconnect</source>
         <translation>다시 연결</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="112"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="211"/>
         <source>Remove</source>
         <translation>제거</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="119"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="218"/>
         <source>Account options Menu</source>
         <translation>계정 옵션 메뉴</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="378"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="556"/>
         <source>Restart sync</source>
-        <translation>동기화 재시작</translation>
+        <translation>동기화 다시 시작</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="378"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="556"/>
         <source>Force sync now</source>
-        <translation>강제로 동기화 시작</translation>
+        <translation>지금 동기화</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="386"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="564"/>
         <source>Resume sync</source>
         <translation>동기화 재개</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="386"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="564"/>
         <source>Pause sync</source>
-        <translation>동기화 일시정지</translation>
+        <translation>동기화 일시 중지</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="394"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="572"/>
         <source>Choose what to sync</source>
         <translation>동기화할 항목 선택</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="402"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="586"/>
         <source>Remove Space</source>
         <translation>스페이스 제거</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="410"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="488"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="593"/>
         <source>Sync options menu</source>
         <translation>동기화 옵션 메뉴</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="422"/>
+        <location filename="../src/gui/qml/FolderDelegate.qml" line="230"/>
         <source>Add Space</source>
         <translation>스페이스 추가</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/qml/FolderDelegate.qml" line="442"/>
-        <source>You are synchronizing %1 out of %2 Spaces</source>
-        <translation>%2개의 스페이스 중 %1개를 동기화하고 있습니다</translation>
     </message>
 </context>
 <context>
@@ -305,52 +315,52 @@ File synchronization desktop utility.</source>
 <context>
     <name>FolderStatus</name>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="98"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="159"/>
         <source>&apos;%1&apos;</source>
         <translation>&apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="119"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="180"/>
         <source>Syncing %1</source>
-        <extracomment>Example text: &quot;Syncing 'foo.txt', 'bar.txt'&quot;</extracomment>
+        <extracomment>Example text: &quot;Syncing &apos;foo.txt&apos;, &apos;bar.txt&apos;&quot;</extracomment>
         <translation>%1 동기화 중</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="121"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="182"/>
         <source>, ⬇️ %1/s</source>
         <translation>, ⬇️ %1/s</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="124"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="185"/>
         <source>, ⬆️ %1/s</source>
         <translation>, ⬆️ %1/s</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="128"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="189"/>
         <source>%1 %2 (%3 of %4)</source>
         <extracomment>Example text: &quot;uploading foobar.png (2MB of 2MB)&quot;</extracomment>
         <translation>%2 %1(%4 중 %3)</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="133"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="194"/>
         <source>%1 %2</source>
         <extracomment>Example text: &quot;uploading foobar.png&quot;</extracomment>
         <translation>%1 %2</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="150"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="211"/>
         <source>%5 left, %1 of %2, file %3 of %4</source>
         <extracomment>Example text: &quot;5 minutes left, 12 MB of 345 MB, file 6 of 7&quot;</extracomment>
         <translation>%5 남음, %2 중 %1, 파일 %4개 중 %3번째</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="158"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="219"/>
         <source>%1 of %2, file %3 of %4</source>
         <extracomment>Example text: &quot;12 MB of 345 MB, file 6 of 7&quot;</extracomment>
         <translation>%2 중 %1, 파일 %4개 중 %3번째</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="162"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="223"/>
         <source>file %1 of %2</source>
         <translation>파일 %2개 중 %1번째</translation>
     </message>
@@ -360,7 +370,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/folderwizard/folderwizard.cpp" line="47"/>
         <source>&lt;b&gt;Error:&lt;/b&gt; %1</source>
-        <translation>&lt;b&gt;에러:&lt;/b&gt; %1</translation>
+        <translation>&lt;b&gt;오류:&lt;/b&gt; %1</translation>
     </message>
     <message>
         <location filename="../src/gui/folderwizard/folderwizard.cpp" line="47"/>
@@ -370,7 +380,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/folderwizard/folderwizard.cpp" line="53"/>
         <source>&lt;b&gt;Error:&lt;/b&gt;&lt;ul&gt;%1&lt;/ul&gt;</source>
-        <translation>&lt;b&gt;에러:&lt;/b&gt;&lt;ul&gt;%1&lt;/ul&gt;</translation>
+        <translation>&lt;b&gt;오류:&lt;/b&gt;&lt;ul&gt;%1&lt;/ul&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/folderwizard/folderwizard.cpp" line="54"/>
@@ -393,17 +403,17 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/folderwizard/folderwizardsourcepage.ui" line="32"/>
         <source>Enter the path to the Spaces root folder. This folder will contain all your synchronized Spaces.</source>
-        <translation>Spaces 루트 폴더 경로를 입력하세요. 이 폴더에는 모든 동기화된 Spaces가 저장됩니다.</translation>
+        <translation>스페이스 루트 폴더 경로를 입력하세요. 동기화하는 스페이스가 모두 이 폴더에 들어갑니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/folderwizard/folderwizardsourcepage.ui" line="39"/>
         <source>Click to select the Spaces root folder.</source>
-        <translation>클릭하여 스페이스의 루트 경로를 선택하세요</translation>
+        <translation>스페이스 루트 폴더를 선택하려면 누르세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folderwizard/folderwizardsourcepage.ui" line="42"/>
         <source>&amp;Choose...</source>
-        <translation>&amp;선택...</translation>
+        <translation>선택(&amp;C)...</translation>
     </message>
 </context>
 <context>
@@ -437,32 +447,37 @@ File synchronization desktop utility.</source>
 <context>
     <name>OAuthCredentials</name>
     <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="32"/>
-        <source>Log in with your web browser</source>
-        <translation>웹 브라우저로 로그인하세요</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="32"/>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="35"/>
         <source>Login failed, please try it again</source>
-        <translation>로그인 실패, 다시 시도해주세요.</translation>
+        <translation>로그인하지 못했습니다. 다시 시도하세요.</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="51"/>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="35"/>
+        <source>Finish logging in in the browser window. This window continues by itself.</source>
+        <translation>열린 브라우저 창에서 로그인을 마치면 이 창이 다음 단계로 넘어갑니다.</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="57"/>
         <source>Reopen web browser</source>
         <translation>웹 브라우저 다시 열기</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="51"/>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="57"/>
         <source>Open web browser</source>
         <translation>웹 브라우저 열기</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="67"/>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="73"/>
         <source>Copy URL</source>
         <translation>URL 복사</translation>
     </message>
     <message>
-        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="102"/>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="79"/>
+        <source>Copy the login address to open it in another browser</source>
+        <translation>로그인 주소를 복사해 다른 브라우저에서 엽니다</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/qml/credentials/OAuthCredentials.qml" line="111"/>
         <source>Restart authentication</source>
         <translation>인증 다시 시작</translation>
     </message>
@@ -477,12 +492,12 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/aboutdialog.ui" line="108"/>
         <source>&amp;Update Channel</source>
-        <translation>&amp;업데이트 채널</translation>
+        <translation>업데이트 채널(&amp;U)</translation>
     </message>
     <message>
         <location filename="../src/gui/aboutdialog.ui" line="137"/>
         <source>&amp;Restart &amp;&amp; Update</source>
-        <translation>&amp;재시작 &amp;&amp; 업데이트</translation>
+        <translation>다시 시작 &amp;&amp; 업데이트(&amp;R)</translation>
     </message>
     <message>
         <location filename="../src/gui/aboutdialog.ui" line="148"/>
@@ -502,7 +517,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/aboutdialog.cpp" line="152"/>
         <source>&lt;html&gt;The update channel determines which client updates will be offered for installation.&lt;ul&gt;&lt;li&gt;&quot;stable&quot; contains only upgrades that are considered reliable&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;⚠️Downgrades are not supported. If you switch to a stable channel this change will only be applied with the next major release.&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;html&gt;업데이트 채널에 따라 설치를 권할 업데이트가 정해집니다.&lt;ul&gt;&lt;li&gt;&quot;stable&quot;에는 안정적이라고 판단한 업데이트만 들어 있습니다&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;⚠️이전 버전으로 되돌리기는 지원하지 않습니다. stable 채널로 바꾸면 다음 주요 버전부터 적용됩니다.&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/aboutdialog.cpp" line="157"/>
@@ -520,7 +535,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/libsync/abstractnetworkjob.cpp" line="47"/>
         <source>Operation canceled</source>
-        <translation type="unfinished"/>
+        <translation>작업이 취소되었습니다</translation>
     </message>
     <message>
         <location filename="../src/libsync/abstractnetworkjob.cpp" line="278"/>
@@ -595,7 +610,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="198"/>
         <source>&lt;p&gt;Do you really want to stop syncing the Space »%1«?&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This will &lt;b&gt;not&lt;/b&gt; delete any files.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;정말 »%1« 스페이스 동기화를 그만두시겠습니까?&lt;/p&gt;&lt;p&gt;&lt;b&gt;참고:&lt;/b&gt; 어떤 파일도 삭제되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;「%1」 스페이스의 동기화를 멈출까요?&lt;/p&gt;&lt;p&gt;PC의 파일은 지우지 않습니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="203"/>
@@ -610,27 +625,27 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="240"/>
         <source>The sync operation is running.&lt;br/&gt;Do you want to stop it?</source>
-        <translation>동기화가 진행 중입니다. &lt;br/&gt;중지하겠습니까?</translation>
+        <translation>동기화가 진행 중입니다.&lt;br/&gt;중지하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="263"/>
         <source>Sync paused by user</source>
-        <translation>사용자에 의해 동기화 일시정지됨</translation>
+        <translation>사용자가 동기화를 일시 중지함</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="272"/>
         <source>Internet connection is metered</source>
-        <translation>인터넷이 유료 연결입니다</translation>
+        <translation>데이터 요금제 연결입니다</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="273"/>
         <source>Synchronization is paused because the Internet connection is a metered connection&lt;p&gt;Do you really want to force a Synchronization now?</source>
-        <translation>인터넷 연결이 유료 연결이기 때문에 동기화가 일시 중지되었습니다.&lt;p&gt; 지금 강제로 동기화를 실행하시겠습니까?</translation>
+        <translation>데이터 요금제 연결이라 동기화를 일시 중지했습니다.&lt;p&gt;그래도 지금 동기화하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="296"/>
         <source>User triggered force sync</source>
-        <translation>사용자에 의해 강제로 동기화 시작됨</translation>
+        <translation>사용자가 「지금 동기화」를 누름</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="320"/>
@@ -655,7 +670,7 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="369"/>
         <source>Sync is paused due to metered internet connection</source>
-        <translation>유료 인터넷 연결로 인해 동기화가 일시 중지되었습니다.</translation>
+        <translation>데이터 요금제 연결이라 동기화를 일시 중지했습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="371"/>
@@ -670,12 +685,12 @@ File synchronization desktop utility.</source>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="496"/>
         <source>Confirm Account Removal</source>
-        <translation>계정 삭제 확인</translation>
+        <translation>계정 연결 제거</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="497"/>
         <source>&lt;p&gt;Do you really want to remove the connection to the account %1«?&lt;/p&gt;&lt;p&gt;&lt;b&gt;Note:&lt;/b&gt; This will &lt;b&gt;not&lt;/b&gt; delete any files.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;정말 %1« 계정 연결을 제거하겠습니까?&lt;/p&gt;&lt;p&gt;&lt;b&gt;참고:&lt;/b&gt; 어떤 파일도 삭제되지 &lt;b&gt;않습니다&lt;/b&gt;.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;「%1」 계정 연결을 제거할까요?&lt;/p&gt;&lt;p&gt;PC의 파일은 지우지 않습니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/accountsettings.cpp" line="501"/>
@@ -691,18 +706,23 @@ File synchronization desktop utility.</source>
 <context>
     <name>OCC::ActivitySettings</name>
     <message>
-        <location filename="../src/gui/activitywidget.cpp" line="44"/>
+        <location filename="../src/gui/activitywidget.cpp" line="40"/>
+        <source>Activity</source>
+        <translation>활동</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/activitywidget.cpp" line="50"/>
         <source>Local Activity</source>
         <translation>로컬 활동</translation>
     </message>
     <message>
-        <location filename="../src/gui/activitywidget.cpp" line="47"/>
-        <location filename="../src/gui/activitywidget.cpp" line="49"/>
+        <location filename="../src/gui/activitywidget.cpp" line="53"/>
+        <location filename="../src/gui/activitywidget.cpp" line="55"/>
         <source>Not Synced</source>
         <translation>동기화되지 않음</translation>
     </message>
     <message>
-        <location filename="../src/gui/activitywidget.cpp" line="52"/>
+        <location filename="../src/gui/activitywidget.cpp" line="58"/>
         <source>Not Synced (%1)</source>
         <extracomment>%1 is the number of not synced files.</extracomment>
         <translation>동기화되지 않음 (%1)</translation>
@@ -733,7 +753,7 @@ The update will be performed in the background, and overwrite the current AppIma
 <context>
     <name>OCC::Application</name>
     <message>
-        <location filename="../src/gui/main.cpp" line="175"/>
+        <location filename="../src/gui/main.cpp" line="177"/>
         <source>Quit</source>
         <translation>종료</translation>
     </message>
@@ -745,12 +765,12 @@ The update will be performed in the background, and overwrite the current AppIma
     <message>
         <location filename="../src/gui/application.cpp" line="190"/>
         <source>The server on account »%1« runs an unsupported version %2. Using this client with unsupported server versions is untested and potentially dangerous. Proceed at your own risk.</source>
-        <translation>계정 »%1«의 서버가 지원되지 않는 버전 %2을(를) 실행 중입니다. 지원되지 않는 서버 버전에서 이 클라이언트를 사용하는 것은 테스트되지 않았으며 잠재적으로 위험합니다. 본인 책임하에 진행하십시오.</translation>
+        <translation>»%1« 계정의 서버 버전(%2)은 지원하지 않습니다. 이 버전에서는 시험하지 않아 문제가 생길 수 있으니 계속하려면 주의하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/application.cpp" line="215"/>
         <source>Application is shutting down</source>
-        <translation>애플리케이션이 종료 중입니다</translation>
+        <translation>앱이 종료 중입니다</translation>
     </message>
 </context>
 <context>
@@ -758,60 +778,67 @@ The update will be performed in the background, and overwrite the current AppIma
     <message>
         <location filename="../src/plugins/vfs/cfapi/vfs_cfapi.cpp" line="140"/>
         <source>The Virtual filesystem feature does not support a drive as sync root</source>
-        <translation type="unfinished"/>
+        <translation>필요할 때 받기 기능은 드라이브 전체를 동기화 폴더로 쓸 수 없습니다</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/cfapi/vfs_cfapi.cpp" line="144"/>
         <source>The Virtual filesystem feature requires a NTFS file system, %1 is using %2</source>
-        <translation type="unfinished"/>
+        <translation>필요할 때 받기 기능에는 NTFS 파일 시스템이 필요합니다. %1의 파일 시스템은 %2입니다</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/cfapi/vfs_cfapi.cpp" line="148"/>
         <source>The Virtual filesystem feature is not supported on network drives</source>
-        <translation type="unfinished"/>
+        <translation>필요할 때 받기 기능은 네트워크 드라이브에서 쓸 수 없습니다</translation>
     </message>
 </context>
 <context>
     <name>OCC::CommonStrings</name>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="27"/>
-        <source>file manager</source>
+        <location filename="../src/gui/commonstrings.cpp" line="24"/>
+        <source>File Explorer</source>
         <translation>파일 탐색기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="33"/>
-        <source>Copy path to clipboard</source>
-        <translation type="unfinished"/>
+        <location filename="../src/gui/commonstrings.cpp" line="28"/>
+        <source>file manager</source>
+        <translation>파일 관리자</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="39"/>
+        <location filename="../src/gui/commonstrings.cpp" line="34"/>
+        <source>Copy path to clipboard</source>
+        <translation>경로 복사</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/commonstrings.cpp" line="40"/>
         <source>Show in %1</source>
         <translation>%1에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="41"/>
+        <location filename="../src/gui/commonstrings.cpp" line="42"/>
         <source>Show »%1« in %2</source>
         <translation>»%1«을(를) %2에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="46"/>
+        <location filename="../src/gui/commonstrings.cpp" line="47"/>
         <source>Show in web browser</source>
         <translation>웹 브라우저에서 보기</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="51"/>
+        <location filename="../src/gui/commonstrings.cpp" line="52"/>
         <source>Copy URL to clipboard</source>
-        <translation type="unfinished"/>
+        <translation>URL 복사</translation>
     </message>
     <message>
-        <location filename="../src/gui/commonstrings.cpp" line="56"/>
+        <location filename="../src/gui/commonstrings.cpp" line="57"/>
         <source>Copy</source>
         <translation>복사</translation>
     </message>
     <message numerus="yes">
-        <location filename="../src/gui/commonstrings.cpp" line="61"/>
+        <location filename="../src/gui/commonstrings.cpp" line="62"/>
         <source>%n Filter(s)</source>
-        <translation><numerusform>필터 %n개</numerusform></translation>
+        <translation>
+            <numerusform>필터 %n개</numerusform>
+        </translation>
     </message>
 </context>
 <context>
@@ -845,17 +872,17 @@ The update will be performed in the background, and overwrite the current AppIma
     <message>
         <location filename="../src/libsync/discoveryphase.cpp" line="212"/>
         <source>Error while opening directory »%1«</source>
-        <translation>디렉터리 »%1«을(를) 여는 중 오류 발생</translation>
+        <translation>폴더 »%1«을(를) 여는 중 오류 발생</translation>
     </message>
     <message>
         <location filename="../src/libsync/discoveryphase.cpp" line="214"/>
         <source>Directory not accessible on client, permission denied</source>
-        <translation>클라이언트에서 디렉터리에 접근할 수 없음, 권한 거부됨</translation>
+        <translation>클라이언트에서 폴더에 접근할 수 없음, 권한 거부됨</translation>
     </message>
     <message>
         <location filename="../src/libsync/discoveryphase.cpp" line="218"/>
         <source>Directory not found: »%1«</source>
-        <translation>디렉토리를 찾을 수 없습니다: »%1«</translation>
+        <translation>폴더를 찾을 수 없습니다: »%1«</translation>
     </message>
 </context>
 <context>
@@ -871,12 +898,12 @@ The update will be performed in the background, and overwrite the current AppIma
     <message>
         <location filename="../src/gui/folder.cpp" line="161"/>
         <source>The path »%1« is too long. Please enable long paths in the Windows settings or choose a different folder.</source>
-        <translation>경로 »%1«이(가) 너무 깁니다. Windows 설정에서 긴 경로를 활성화하거나 다른 폴더를 선택하십시오.</translation>
+        <translation>경로 »%1«이(가) 너무 깁니다. Windows 설정에서 긴 경로를 활성화하거나 다른 폴더를 선택하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="211"/>
         <source>Failed to open the database for »%1«.</source>
-        <translation>»%1«에 대한 데이터베이스를 열지 못했습니다.</translation>
+        <translation>»%1«의 데이터베이스를 열지 못했습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="189"/>
@@ -887,7 +914,7 @@ The update will be performed in the background, and overwrite the current AppIma
         <location filename="../src/gui/folder.cpp" line="95"/>
         <location filename="../src/gui/folder.cpp" line="848"/>
         <source>Failed to load excludes</source>
-        <translation type="unfinished"/>
+        <translation>제외 목록을 읽지 못했습니다</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="217"/>
@@ -907,101 +934,115 @@ The update will be performed in the background, and overwrite the current AppIma
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="488"/>
         <source>»%1« and %n other file(s) have been removed.</source>
-        <translation><numerusform>»%1« 및 %n개의 다른 파일(들)이 제거되었습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」 외 파일 %n개가 삭제되었습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="490"/>
         <source>»%1« has been removed.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 제거되었습니다.</translation>
+        <translation>「%1」이(가) 삭제되었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="495"/>
         <source>»%1« and %n other file(s) have been added.</source>
-        <translation><numerusform>»%1« 및 %n개의 다른 파일(들)이 추가되었습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」 외 파일 %n개가 추가되었습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="497"/>
         <source>»%1« has been added.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 추가되었습니다.</translation>
+        <translation>「%1」이(가) 추가되었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="502"/>
         <source>»%1« and %n other file(s) have been updated.</source>
-        <translation><numerusform>»%1« 및 %n개의 다른 파일(들)이 업데이트되었습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」 외 파일 %n개가 바뀌었습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="504"/>
         <source>»%1« has been updated.</source>
         <comment>%1 names a file.</comment>
-        <translation>»%1«이 업데이트되었습니다.</translation>
+        <translation>「%1」이(가) 바뀌었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="509"/>
         <source>»%1« has been renamed to »%2« and %n other file(s) have been renamed.</source>
-        <translation><numerusform>»%1«의 이름이 »%2«로 변경되었고, 다른 %n개의 파일(들)의 이름이 변경되었습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」의 이름이 「%2」(으)로 바뀌었고, 다른 파일 %n개도 이름이 바뀌었습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="511"/>
         <source>»%1« has been renamed to »%2«.</source>
         <comment>%1 and %2 name files.</comment>
-        <translation>»%1«의 이름이 »%2«로 변경되었습니다.</translation>
+        <translation>「%1」의 이름이 「%2」(으)로 바뀌었습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="516"/>
         <source>»%1« has been moved to »%2« and %n other file(s) have been moved.</source>
-        <translation><numerusform>»%1«이 »%2«로 이동되었고, 다른 %n개의 파일(들)이 이동되었습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」이(가) 「%2」(으)로 옮겨졌고, 다른 파일 %n개도 옮겨졌습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="518"/>
         <source>»%1« has been moved to »%2«.</source>
-        <translation>»%1«이 »%2«로 이동되었습니다.</translation>
+        <translation>「%1」이(가) 「%2」(으)로 옮겨졌습니다.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="523"/>
         <source>»%1« and %n other file(s) have sync conflicts.</source>
-        <translation><numerusform>»%1« 및 %n개의 다른 파일(들)에 동기화 충돌이 있습니다.</numerusform></translation>
+        <translation>
+            <numerusform>「%1」 외 파일 %n개에 동기화 충돌이 있습니다.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="525"/>
         <source>»%1« has a sync conflict. Please check the conflict file!</source>
-        <translation>»%1«에 동기화 충돌이 있습니다. 충돌 파일을 확인하세요!</translation>
+        <translation>「%1」에 동기화 충돌이 있습니다. 충돌 파일을 확인하세요.</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/gui/folder.cpp" line="530"/>
         <source>»%1« and %n other file(s) could not be synced due to errors. See the log for details.</source>
-        <translation><numerusform>»%1« 및 다른 %n개의 파일(들)을 오류로 인해 동기화할 수 없습니다. 자세한 내용은 로그를 참조하세요.</numerusform></translation>
+        <translation>
+            <numerusform>오류로 「%1」 외 파일 %n개를 동기화하지 못했습니다. 자세한 내용은 로그 파일을 보세요.</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="532"/>
         <source>»%1« could not be synced due to an error. See the log for details.</source>
-        <translation>오류로 인해 »%1«을 동기화할 수 없습니다. 자세한 내용은 로그를 참조하세요.</translation>
+        <translation>오류로 「%1」을(를) 동기화하지 못했습니다. 자세한 내용은 로그 파일을 보세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="538"/>
         <source>Sync Activity</source>
-        <translation>동기화 활성화</translation>
+        <translation>동기화 소식</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="740"/>
         <source>Switching VFS mode on folder »%1«</source>
-        <translation>폴더 »%1«을 VFS 모드를 전환합니다.</translation>
+        <translation>»%1« 폴더의 VFS 모드를 바꾸는 중</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="873"/>
         <source>Reloading excludes on folder »%1«</source>
-        <translation type="unfinished"/>
+        <translation>「%1」 폴더의 제외 목록을 다시 읽는 중</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="1095"/>
         <source>The folder »%1« was created but was excluded from synchronization previously. Data inside it will not be synchronized.</source>
-        <translation>폴더 »%1«이 생성되었지만 이전에 동기화에서 제외되었습니다. 폴더 안의 데이터는 동기화되지 않습니다.</translation>
+        <translation>»%1« 폴더가 생겼지만 동기화 제외 대상이라 안의 데이터는 동기화하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="1098"/>
         <source>The file »%1« was created but was excluded from synchronization previously. It will not be synchronized.</source>
-        <translation>파일 »%1«이(가) 생성되었지만 이전에 동기화에서 제외되었습니다. 동기화되지 않습니다.</translation>
+        <translation>»%1« 파일이 생겼지만 동기화 제외 대상이라 동기화하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/folder.cpp" line="1102"/>
@@ -1032,7 +1073,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/folderman.cpp" line="241"/>
         <source>An old sync journal %1 was found, but could not be removed. Please make sure that no application is currently using it.</source>
-        <translation>오래된 동기화 저널 %1이(가) 발견되었지만 제거할 수 없습니다. 현재 이 파일을 사용하는 애플리케이션이 없는지 확인하십시오.</translation>
+        <translation>오래된 동기화 저널 %1이(가) 발견되었지만 제거할 수 없습니다. 현재 이 파일을 사용하는 앱이 없는지 확인하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folderman.cpp" line="303"/>
@@ -1067,7 +1108,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/folderman.cpp" line="536"/>
         <source>The folder »%1« is already in use by application %2!</source>
-        <translation>폴더 »%1«은(는) 이미 애플리케이션 %2에서 사용 중입니다!</translation>
+        <translation>폴더 »%1«은(는) 이미 앱 %2에서 사용 중입니다!</translation>
     </message>
     <message>
         <location filename="../src/gui/folderman.cpp" line="549"/>
@@ -1077,17 +1118,17 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/folderman.cpp" line="625"/>
         <source>The local folder »%1« already contains a folder used in a folder sync connection. Please pick another local folder!</source>
-        <translation>로컬 폴더 »%1«에는 폴더 동기화 연결에 사용되는 폴더가 이미 포함되어 있습니다. 다른 로컬 폴더를 선택하십시오!</translation>
+        <translation>로컬 폴더 »%1«에는 폴더 동기화 연결에 사용되는 폴더가 이미 포함되어 있습니다. 다른 로컬 폴더를 선택하세요!</translation>
     </message>
     <message>
         <location filename="../src/gui/folderman.cpp" line="631"/>
         <source>The local folder »%1« is already contained in a folder used in a folder sync connection. Please pick another local folder!</source>
-        <translation>로컬 폴더 »%1«은(는) 폴더 동기화 연결에 사용되는 폴더에 이미 포함되어 있습니다. 다른 로컬 폴더를 선택하십시오!</translation>
+        <translation>로컬 폴더 »%1«은(는) 폴더 동기화 연결에 사용되는 폴더에 이미 포함되어 있습니다. 다른 로컬 폴더를 선택하세요!</translation>
     </message>
     <message>
         <location filename="../src/gui/folderman.cpp" line="639"/>
         <source>Please pick another local folder for »%1«.</source>
-        <translation>»%1«에 대한 다른 로컬 폴더를 선택하십시오.</translation>
+        <translation>»%1«에 쓸 다른 PC 폴더를 선택하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/folderman.cpp" line="564"/>
@@ -1117,38 +1158,84 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/folderman.cpp" line="622"/>
         <source>There is already a sync from the server to this local folder. Please pick another local folder!</source>
-        <translation>이 폴더는 이미 서버와 동기화되고 있습니다. 다른 폴더를 선택해 주세요!</translation>
+        <translation>이 폴더는 이미 서버와 동기화되고 있습니다. 다른 폴더를 선택하세요.</translation>
     </message>
 </context>
 <context>
     <name>OCC::FolderStatusModel</name>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="254"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="82"/>
+        <source>Has conflicts</source>
+        <translation>충돌 있음</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="82"/>
+        <source>Up to date</source>
+        <translation>최신 상태</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="84"/>
+        <source>Syncing</source>
+        <translation>동기화 중</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="87"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="89"/>
+        <source>Paused</source>
+        <translation>일시 중지됨</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="89"/>
+        <source>Paused on metered connection</source>
+        <translation>데이터 요금제 연결이라 일시 중지됨</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="91"/>
+        <source>Disconnected</source>
+        <translation>연결 끊김</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="93"/>
+        <source>Some files not synced</source>
+        <translation>일부 파일 동기화 안 됨</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="96"/>
+        <source>Sync error</source>
+        <translation>동기화 오류</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="101"/>
+        <source>Waiting to sync</source>
+        <translation>동기화 대기 중</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="315"/>
         <source>There are unresolved conflicts.</source>
         <translation>해결되지 않은 충돌이 있습니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="299"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="360"/>
         <source>%1 of %2 used</source>
         <translation>%2 중 %1 사용됨</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="382"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="462"/>
         <source>Checking for changes in remote »%1«</source>
         <translation>원격 »%1«의 변경 사항 확인 중</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="384"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="464"/>
         <source>Checking for changes in local »%1«</source>
         <translation>로컬 »%1«의 변경 사항 확인 중</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="388"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="468"/>
         <source>Reconciling changes</source>
         <translation>변경 사항 조정 중</translation>
     </message>
     <message>
-        <location filename="../src/gui/folderstatusmodel.cpp" line="265"/>
+        <location filename="../src/gui/folderstatusmodel.cpp" line="326"/>
         <source>Local folder: %1</source>
         <translation>로컬 폴더: %1</translation>
     </message>
@@ -1158,7 +1245,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/folderwatcher_linux.cpp" line="96"/>
         <source>This problem usually happens when the inotify watches are exhausted. Check the FAQ for details.</source>
-        <translation>이 문제는 보통 inotify 감시자가 고갈되었을 때 발생합니다. 자세한 내용은 FAQ를 확인하십시오.</translation>
+        <translation>이 문제는 보통 inotify 감시자가 고갈되었을 때 발생합니다. 자세한 내용은 FAQ를 확인하세요.</translation>
     </message>
 </context>
 <context>
@@ -1188,7 +1275,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/libsync/networkjobs/getfilejob.cpp" line="122"/>
         <source>No E-Tag received from server, check Proxy/Gateway</source>
-        <translation>서버에서 E-Tag를 받지 못했습니다. 프록시/게이트웨이를 확인하십시오.</translation>
+        <translation>서버에서 E-Tag를 받지 못했습니다. 프록시/게이트웨이를 확인하세요.</translation>
     </message>
     <message>
         <location filename="../src/libsync/networkjobs/getfilejob.cpp" line="128"/>
@@ -1209,92 +1296,122 @@ This means that the synchronization client might not upload local changes immedi
 <context>
     <name>OCC::GeneralSettings</name>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="14"/>
+        <location filename="../src/gui/generalsettings.ui" line="12"/>
         <source>Form</source>
         <translation>폼</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="35"/>
-        <source>General Settings</source>
-        <translation>일반 설정</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/generalsettings.ui" line="80"/>
+        <location filename="../src/gui/generalsettings.ui" line="232"/>
+        <location filename="../src/gui/generalsettings.ui" line="248"/>
         <source>Start on Login</source>
         <translation>로그인 시 시작</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="52"/>
+        <location filename="../src/gui/generalsettings.ui" line="179"/>
         <source>Language</source>
         <translation>언어</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="68"/>
+        <location filename="../src/gui/generalsettings.ui" line="111"/>
+        <source>Settings</source>
+        <translation>설정</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="124"/>
+        <source>General</source>
+        <translation>일반</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="195"/>
         <source>Language selector</source>
         <translation>언어 선택기</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="98"/>
+        <location filename="../src/gui/generalsettings.ui" line="267"/>
+        <source>Synchronization</source>
+        <translation>동기화</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="322"/>
+        <location filename="../src/gui/generalsettings.ui" line="338"/>
         <source>Sync hidden files</source>
         <translation>숨김 파일 동기화</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="111"/>
+        <location filename="../src/gui/generalsettings.ui" line="428"/>
+        <source>Files that are never synchronized</source>
+        <translation>동기화하지 않을 파일</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="501"/>
+        <source>Troubleshooting</source>
+        <translation>문제 해결</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="556"/>
+        <location filename="../src/gui/generalsettings.ui" line="572"/>
         <source>Show crash reporter</source>
-        <translation>충돌 보고서 표시</translation>
+        <translation>비정상 종료 보고 창 표시</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="118"/>
+        <location filename="../src/gui/generalsettings.ui" line="711"/>
+        <source>Version</source>
+        <translation>버전</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="375"/>
+        <location filename="../src/gui/generalsettings.ui" line="391"/>
         <source>Move remotely deleted files to the local trash bin instead of deleting them</source>
-        <translation>원격에서 삭제된 파일을 삭제하는 대신 로컬 휴지통으로 이동</translation>
+        <translation>서버에서 지운 파일을 PC 휴지통으로 보내기</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="127"/>
+        <location filename="../src/gui/generalsettings.ui" line="444"/>
         <source>Edit Ignored Files</source>
-        <translation>무시된 파일 편집</translation>
+        <translation>제외 목록 편집</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="134"/>
+        <location filename="../src/gui/generalsettings.ui" line="609"/>
+        <source>Log files for problem reports</source>
+        <translation>문제 보고용 로그 파일</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/generalsettings.ui" line="625"/>
         <source>Log Settings</source>
         <translation>로그 설정</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="161"/>
+        <location filename="../src/gui/generalsettings.ui" line="457"/>
         <source>Network</source>
         <translation>네트워크</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="222"/>
+        <location filename="../src/gui/generalsettings.ui" line="638"/>
+        <location filename="../src/gui/generalsettings.ui" line="740"/>
         <source>About</source>
         <translation>정보</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.ui" line="90"/>
-        <source>Advanced</source>
-        <translation>고급</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/generalsettings.cpp" line="146"/>
+        <location filename="../src/gui/generalsettings.cpp" line="149"/>
         <source>You cannot disable autostart because system-wide autostart is enabled.</source>
         <translation>시스템 전체 자동 시작이 활성화되어 있어 자동 시작을 비활성화할 수 없습니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.cpp" line="55"/>
+        <location filename="../src/gui/generalsettings.cpp" line="56"/>
         <source>Warning</source>
         <translation>경고</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.cpp" line="55"/>
+        <location filename="../src/gui/generalsettings.cpp" line="56"/>
         <source>Language changes require a restart of this application to take effect.</source>
-        <translation>언어 변경 사항을 적용하려면 이 애플리케이션을 다시 시작해야 합니다.</translation>
+        <translation>언어 변경 사항을 적용하려면 이 앱을 다시 시작해야 합니다.</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.cpp" line="179"/>
+        <location filename="../src/gui/generalsettings.cpp" line="182"/>
         <source>unknown (%1)</source>
         <translation>알 수 없음 (%1)</translation>
     </message>
     <message>
-        <location filename="../src/gui/generalsettings.cpp" line="163"/>
+        <location filename="../src/gui/generalsettings.cpp" line="166"/>
         <source>(use default)</source>
         <translation>(기본값 사용)</translation>
     </message>
@@ -1302,12 +1419,12 @@ This means that the synchronization client might not upload local changes immedi
 <context>
     <name>OCC::GraphApi::Space</name>
     <message>
-        <location filename="../src/libsync/graphapi/space.cpp" line="112"/>
+        <location filename="../src/libsync/graphapi/space.cpp" line="122"/>
         <source>Personal</source>
         <translation>개인</translation>
     </message>
     <message>
-        <location filename="../src/libsync/graphapi/space.cpp" line="115"/>
+        <location filename="../src/libsync/graphapi/space.cpp" line="125"/>
         <source>Shares</source>
         <translation>공유</translation>
     </message>
@@ -1317,7 +1434,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/creds/httpcredentialsgui.cpp" line="54"/>
         <source>Login required</source>
-        <translation>로그인이 필요</translation>
+        <translation>로그인이 필요합니다</translation>
     </message>
 </context>
 <context>
@@ -1335,7 +1452,7 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/libsync/vfs/hydrationjob.cpp" line="64"/>
         <source>File not found</source>
-        <translation type="unfinished"/>
+        <translation>파일을 찾을 수 없습니다</translation>
     </message>
     <message>
         <location filename="../src/libsync/vfs/hydrationjob.cpp" line="68"/>
@@ -1348,12 +1465,12 @@ This means that the synchronization client might not upload local changes immedi
     <message>
         <location filename="../src/gui/ignorelisteditor.ui" line="14"/>
         <source>Ignored Files Editor</source>
-        <translation>무시된 파일 편집기</translation>
+        <translation>제외 목록 편집</translation>
     </message>
     <message>
         <location filename="../src/gui/ignorelisteditor.ui" line="20"/>
         <source>Files Ignored by Patterns</source>
-        <translation>패턴에 의해 무시되는 파일</translation>
+        <translation>패턴으로 제외하는 파일</translation>
     </message>
     <message>
         <location filename="../src/gui/ignorelisteditor.ui" line="59"/>
@@ -1382,7 +1499,7 @@ This means that the synchronization client might not upload local changes immedi
 Items where deletion is allowed will be deleted if they prevent a directory from being removed. This is useful for meta data.</source>
         <translation>패턴과 일치하는 파일이나 폴더는 동기화되지 않습니다. 변경 사항은 다음에 폴더가 동기화될 때 적용됩니다.
 
-삭제가 허용된 항목은 디렉터리 제거를 방해하는 경우 삭제됩니다. 이는 메타 데이터에 유용합니다.</translation>
+삭제를 허용한 항목은 폴더 삭제를 막으면 함께 삭제합니다. 메타데이터 파일에 알맞습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/ignorelisteditor.cpp" line="110"/>
@@ -1392,7 +1509,7 @@ Items where deletion is allowed will be deleted if they prevent a directory from
     <message>
         <location filename="../src/gui/ignorelisteditor.cpp" line="41"/>
         <source>This entry is provided by the system at %1 and cannot be modified in this view.</source>
-        <translation>이 항목은 %1의 시스템에서 제공하며 이 보기에서 수정할 수 없습니다.</translation>
+        <translation>시스템 제외 목록(%1)에 있는 항목이라 여기서 고칠 수 없습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/ignorelisteditor.cpp" line="111"/>
@@ -1402,12 +1519,12 @@ Items where deletion is allowed will be deleted if they prevent a directory from
     <message>
         <location filename="../src/gui/ignorelisteditor.cpp" line="133"/>
         <source>Add Ignore Pattern</source>
-        <translation>무시 패턴 추가</translation>
+        <translation>제외 패턴 추가</translation>
     </message>
     <message>
         <location filename="../src/gui/ignorelisteditor.cpp" line="134"/>
         <source>Add a new ignore pattern:</source>
-        <translation>새로운 무시 패턴을 추가합니다:</translation>
+        <translation>추가할 제외 패턴:</translation>
     </message>
 </context>
 <context>
@@ -1420,12 +1537,12 @@ Items where deletion is allowed will be deleted if they prevent a directory from
     <message>
         <location filename="../src/gui/issueswidget.ui" line="40"/>
         <source>Issues table</source>
-        <translation>이슈 테이블</translation>
+        <translation>문제 표</translation>
     </message>
     <message>
         <location filename="../src/gui/issueswidget.ui" line="72"/>
         <source>There were too many issues. Not all will be visible here.</source>
-        <translation>이슈가 너무 많습니다. 여기에 모두 표시되지 않습니다.</translation>
+        <translation>문제가 너무 많아 일부만 보입니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/issueswidget.cpp" line="230"/>
@@ -1476,9 +1593,9 @@ Since log files can get large, the client will start a new one for each sync run
         <location filename="../src/gui/logbrowser.ui" line="91"/>
         <source>C:/log</source>
         <translation>C:/log
- 
- 
- </translation>
+&#xa0;
+&#xa0;
+&#xa0;</translation>
     </message>
     <message>
         <location filename="../src/gui/logbrowser.ui" line="123"/>
@@ -1529,62 +1646,57 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OCC::NetworkSettings</name>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="14"/>
+        <location filename="../src/gui/networksettings.ui" line="12"/>
         <source>Form</source>
         <translation>폼</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="20"/>
+        <location filename="../src/gui/networksettings.ui" line="58"/>
+        <location filename="../src/gui/networksettings.ui" line="74"/>
         <source>Pause synchronization when the Internet connection is metered</source>
-        <translation>인터넷 연결이 종량제인 경우 동기화 일시 정지</translation>
+        <translation>데이터 요금제 연결에서는 동기화 일시 중지</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="35"/>
+        <location filename="../src/gui/networksettings.ui" line="113"/>
         <source>Download Bandwidth</source>
         <translation>다운로드 대역폭</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="155"/>
+        <location filename="../src/gui/networksettings.ui" line="298"/>
         <source>Upload bandwidth in kilobytes per second</source>
         <translation>초당 킬로바이트 단위의 업로드 대역폭</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="86"/>
-        <location filename="../src/gui/networksettings.ui" line="171"/>
-        <source>KBytes/s</source>
-        <translation>KBytes/s</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/networksettings.ui" line="41"/>
-        <location filename="../src/gui/networksettings.ui" line="123"/>
+        <location filename="../src/gui/networksettings.ui" line="153"/>
+        <location filename="../src/gui/networksettings.ui" line="268"/>
         <source>No limit</source>
         <translation>제한 없음</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="51"/>
-        <location filename="../src/gui/networksettings.ui" line="133"/>
+        <location filename="../src/gui/networksettings.ui" line="163"/>
+        <location filename="../src/gui/networksettings.ui" line="278"/>
         <source>Limit to 3/4 of estimated bandwidth</source>
         <translation>네트워크 추정 대역폭의 3/4로 제한</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="63"/>
-        <location filename="../src/gui/networksettings.ui" line="145"/>
+        <location filename="../src/gui/networksettings.ui" line="173"/>
+        <location filename="../src/gui/networksettings.ui" line="288"/>
         <source>Manual limit</source>
-        <translation>수동 제한</translation>
+        <translation>직접 제한</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="73"/>
+        <location filename="../src/gui/networksettings.ui" line="183"/>
         <source>Download bandwidth in kilobytes per second</source>
         <translation>초당 킬로바이트 단위의 다운로드 대역폭</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="117"/>
+        <location filename="../src/gui/networksettings.ui" line="228"/>
         <source>Upload Bandwidth</source>
         <translation>업로드 대역폭</translation>
     </message>
     <message>
-        <location filename="../src/gui/networksettings.ui" line="54"/>
-        <location filename="../src/gui/networksettings.ui" line="136"/>
+        <location filename="../src/gui/networksettings.ui" line="166"/>
+        <location filename="../src/gui/networksettings.ui" line="281"/>
         <source>Limit automatically</source>
         <translation>자동 제한</translation>
     </message>
@@ -1594,7 +1706,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updater/newversionavailablewidget.cpp" line="33"/>
         <source>Skip this version</source>
-        <translation>이 버전 건너뜀</translation>
+        <translation>이 버전 건너뛰기</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/newversionavailablewidget.cpp" line="34"/>
@@ -1610,109 +1722,109 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OCC::OAuth</name>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="352"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="353"/>
         <source>Error returned from the server: &lt;em&gt;%1&lt;/em&gt;</source>
-        <translation>서버로부터 에러 반환됨: &lt;em&gt;%1&lt;/em&gt;</translation>
+        <translation>서버 오류: &lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="354"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="355"/>
         <source>There was an error accessing the &apos;token&apos; endpoint: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</source>
         <translation>&apos;token&apos; 엔드포인트에 접근하는 중 오류가 발생했습니다: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="356"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="357"/>
         <source>Could not parse the JSON returned from the server: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</source>
         <translation>서버에서 반환된 JSON을 파싱할 수 없습니다: &lt;br&gt;&lt;em&gt;%1&lt;/em&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="358"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="359"/>
         <source>Unsupported token type: %1</source>
         <translation>지원되지 않는 토큰 유형: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="360"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="361"/>
         <source>The reply from the server did not contain all expected fields
 :%1</source>
         <translation>서버의 응답에 예상된 모든 필드가 포함되지 않았습니다
 :%1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="362"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="363"/>
         <source>Unknown Error</source>
         <translation>알 수 없는 오류</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="365"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="366"/>
         <source>The id_token could not be parsed</source>
-        <translation type="unfinished"/>
+        <translation>id_token을 해석할 수 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="375"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="376"/>
         <source>&lt;h1&gt;Incorrect user&lt;/h1&gt;&lt;p&gt;You logged-in as user &lt;em&gt;%1&lt;/em&gt;, but must login with user &lt;em&gt;%2&lt;/em&gt;.&lt;br&gt;Please return to the %3 and restart the authentication.&lt;/p&gt;</source>
-        <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;사용자 &lt;em&gt;%1&lt;/em&gt;로 로그인했지만, 사용자 &lt;em&gt;%2&lt;/em&gt;로 로그인해야 합니다.&lt;br&gt;%3으로 돌아가서 다시 로그인 하세요.&lt;/p&gt;</translation>
+        <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;사용자 &lt;em&gt;%1&lt;/em&gt;로 로그인했지만, 사용자 &lt;em&gt;%2&lt;/em&gt;로 로그인해야 합니다.&lt;br&gt;%3(으)로 돌아가 다시 로그인하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="380"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="381"/>
         <source>&lt;h1&gt;Incorrect user&lt;/h1&gt;&lt;p&gt;You logged-in as a different user than is associated with this account.&lt;br&gt;Please return to the %1 and restart the authentication.&lt;/p&gt;</source>
-        <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;이 계정에 연결된 사용자로 로그인하지 않았습니다.&lt;br&gt;%1으로 돌아가서 다시 로그인 하세요.&lt;/p&gt;</translation>
+        <translation>&lt;h1&gt;잘못된 사용자&lt;/h1&gt;&lt;p&gt;이 계정에 연결된 사용자로 로그인하지 않았습니다.&lt;br&gt;%1(으)로 돌아가 다시 로그인하세요.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="385"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="386"/>
         <source>Incorrect user</source>
         <translation>잘못된 사용자</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="399"/>
-        <source>&lt;h1&gt;Login successful&lt;/h1&gt;&lt;p&gt;You can close this window.&lt;/p&gt;</source>
-        <translation>&lt;h1&gt;로그인 성공&lt;/h1&gt;&lt;p&gt;이 창을 닫아도 됩니다.&lt;/p&gt;</translation>
-    </message>
-    <message>
         <location filename="../src/libsync/creds/oauth.cpp" line="400"/>
+        <source>&lt;h1&gt;Login successful&lt;/h1&gt;&lt;p&gt;You can close this window.&lt;/p&gt;</source>
+        <translation>&lt;h1&gt;로그인했습니다&lt;/h1&gt;&lt;p&gt;이 창을 닫고 채움드라이브로 돌아가세요.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../src/libsync/creds/oauth.cpp" line="401"/>
         <source>Login successful</source>
-        <translation>로그인 성공</translation>
+        <translation>로그인했습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="563"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="564"/>
         <source>WebFinger response had unexpected content type: %1</source>
-        <translation type="unfinished"/>
+        <translation>WebFinger 응답의 형식이 예상과 다릅니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="573"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="574"/>
         <source>Could not parse WebFinger response: %1</source>
-        <translation type="unfinished"/>
+        <translation>WebFinger 응답을 해석할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="581"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="582"/>
         <source>WebFinger response subject did not match the requested resource</source>
-        <translation type="unfinished"/>
+        <translation>WebFinger 응답의 subject가 요청한 리소스와 다릅니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="593"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="594"/>
         <source>WebFinger response did not contain an OpenID Connect issuer</source>
-        <translation type="unfinished"/>
+        <translation>WebFinger 응답에 OpenID Connect issuer가 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="600"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="601"/>
         <source>WebFinger issuer link had no href</source>
-        <translation type="unfinished"/>
+        <translation>WebFinger issuer 링크에 href가 없습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="685"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="686"/>
         <source>Could not parse OIDC discovery response: %1</source>
-        <translation type="unfinished"/>
+        <translation>OIDC discovery 응답을 해석할 수 없습니다: %1</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="339"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="340"/>
         <source>Login Error</source>
-        <translation>로그인 에러</translation>
+        <translation>로그인 오류</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="367"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="368"/>
         <source>The audience of the id_token did not contain &quot;%1&quot;</source>
         <translation>id_token의 대상(audience)에 &quot;%1&quot;이(가) 포함되지 않았습니다</translation>
     </message>
     <message>
-        <location filename="../src/libsync/creds/oauth.cpp" line="339"/>
+        <location filename="../src/libsync/creds/oauth.cpp" line="340"/>
         <source>&lt;h1&gt;Login Error&lt;/h1&gt;&lt;p&gt;%1&lt;/p&gt;</source>
         <translation>&lt;h1&gt;로그인 오류&lt;/h1&gt;&lt;p&gt;%1&lt;/p&gt;</translation>
     </message>
@@ -1737,22 +1849,22 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="149"/>
         <source>%1 installed successfully. Restart the application to finish installing the update.</source>
-        <translation>%1이 성공적으로 설치되었습니다. 업데이트 설치를 완료하려면 애플리케이션을 다시 시작하세요.</translation>
+        <translation>%1을(를) 설치했습니다. 업데이트를 마치려면 앱을 다시 시작하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="151"/>
         <source>%1 available. Restart application to start the update.</source>
-        <translation>%1을 사용할 수 있습니다. 업데이트를 시작하려면 애플리케이션을 다시 시작하세요.</translation>
+        <translation>%1을 사용할 수 있습니다. 업데이트를 시작하려면 앱을 다시 시작하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="162"/>
         <source>New %1 available. Please click &lt;a href=&apos;%2&apos;&gt;here&lt;/a&gt; to download the new AppImage manually.</source>
-        <translation>새로운 %1을(를) 사용할 수 있습니다. 새로운 AppImage를 수동으로 다운로드하려면 &lt;a href=&apos;%2&apos;&gt;여기&lt;/a&gt;를 클릭하십시오.</translation>
+        <translation>새로운 %1을(를) 사용할 수 있습니다. 새로운 AppImage를 수동으로 다운로드하려면 &lt;a href=&apos;%2&apos;&gt;여기&lt;/a&gt;를 클릭하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="165"/>
         <source>New %1 available. Please use the system&apos;s update tool to install it.</source>
-        <translation>새로운 %1을(를) 사용할 수 있습니다. 시스템의 업데이트 도구를 사용하여 설치하십시오.</translation>
+        <translation>새로운 %1을(를) 사용할 수 있습니다. 시스템의 업데이트 도구를 사용하여 설치하세요.</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="167"/>
@@ -1775,17 +1887,17 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="199"/>
         <source>Unable to claim the sync root for files on demand, the folder is already claimed by %1</source>
-        <translation type="unfinished"/>
+        <translation>필요할 때 받기용 동기화 폴더를 등록할 수 없습니다. 이 폴더는 이미 %1에서 쓰고 있습니다</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="202"/>
         <source>Unable to retrieve registration info. Error: %1</source>
-        <translation type="unfinished"/>
+        <translation>등록 정보를 가져올 수 없습니다. 오류: %1</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="435"/>
         <source>Cannot dehydrate a placeholder because the file changed</source>
-        <translation type="unfinished"/>
+        <translation>파일이 바뀌어 온라인 전용 파일로 되돌릴 수 없습니다</translation>
     </message>
 </context>
 <context>
@@ -1793,32 +1905,32 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="287"/>
         <source>Failed to read /proc/self/mountinfo</source>
-        <translation type="unfinished"/>
+        <translation>/proc/self/mountinfo를 읽지 못했습니다</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="300"/>
         <source>Failed to unmount the OpenVFS mount %1 Error:%2</source>
-        <translation type="unfinished"/>
+        <translation>OpenVFS 마운트 %1을(를) 해제하지 못했습니다. 오류: %2</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="309"/>
         <source>The filesystem for %1 does not support xattributes.</source>
-        <translation type="unfinished"/>
+        <translation>%1의 파일 시스템이 확장 속성(xattr)을 지원하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="312"/>
         <source>The sync path is already claimed by %1</source>
-        <translation type="unfinished"/>
+        <translation>이 동기화 경로는 이미 %1에서 쓰고 있습니다</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="316"/>
         <source>OpenVFS executable not found, please install it</source>
-        <translation type="unfinished"/>
+        <translation>OpenVFS 실행 파일이 없습니다. 설치하세요</translation>
     </message>
     <message>
         <location filename="../src/plugins/vfs/openvfs/vfs_openvfs.cpp" line="322"/>
         <source>Failed to find the OpenVFS config file, please check your installation.</source>
-        <translation type="unfinished"/>
+        <translation>OpenVFS 설정 파일을 찾지 못했습니다. 설치 상태를 확인하세요.</translation>
     </message>
 </context>
 <context>
@@ -1839,7 +1951,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/discovery.cpp" line="164"/>
         <source>Encrypted vault files are not synchronized because they are currently not supported by this application.</source>
-        <translation type="unfinished"/>
+        <translation>암호화된 보관함 파일은 아직 지원하지 않아 동기화하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/discovery.cpp" line="176"/>
@@ -1874,12 +1986,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/discovery.cpp" line="209"/>
         <source>File/Folder is ignored because it&apos;s hidden.</source>
-        <translation>파일/폴더가 숨겨져 있으므로 무시됩니다.</translation>
+        <translation>숨김 항목이라 동기화하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/discovery.cpp" line="213"/>
         <source>Conflict: Server version downloaded, local copy renamed and not uploaded.</source>
-        <translation>충돌: 서버 버전이 다운로드되었지만 로컬 복사본의 이름이 변경되어 업로드되지 않았습니다.</translation>
+        <translation>충돌: 서버 버전을 다운로드했습니다. PC의 파일은 이름을 바꿔 두었고 업로드하지 않았습니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/discovery.cpp" line="217"/>
@@ -1899,7 +2011,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/discovery.cpp" line="1253"/>
         <source>Server replied with an error while reading directory »%1«: %2</source>
-        <translation>디렉터리 »%1«을(를) 읽는 중 서버에서 오류 응답: %2</translation>
+        <translation>폴더 »%1«을(를) 읽는 중 서버에서 오류 응답: %2</translation>
     </message>
     <message>
         <location filename="../src/libsync/discovery.cpp" line="1043"/>
@@ -1909,7 +2021,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/discovery.cpp" line="171"/>
         <source>The file is listed on the ignore list.</source>
-        <translation>이 파일은 무시 목록에 있습니다.</translation>
+        <translation>제외 목록에 있는 파일입니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/discovery.cpp" line="520"/>
@@ -1971,7 +2083,7 @@ Note that using any logging command line options will override the settings.</so
         <location filename="../src/libsync/propagatedownload.cpp" line="105"/>
         <location filename="../src/libsync/propagatedownload.cpp" line="601"/>
         <source>The file has changed since discovery</source>
-        <translation>검색 이후 파일이 변경되었습니다</translation>
+        <translation>변경 사항을 확인한 뒤 파일이 바뀌었습니다</translation>
     </message>
     <message>
         <location filename="../src/libsync/propagatedownload.cpp" line="110"/>
@@ -2010,7 +2122,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/propagatedownload.cpp" line="449"/>
         <source>The downloaded file is empty despite the server announced it should have been %1.</source>
-        <translation>서버에서 %1이어야 한다고 알렸지만 다운로드된 파일이 비어 있습니다.</translation>
+        <translation>서버가 알린 크기는 %1인데 다운로드한 파일이 비어 있습니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/propagatedownload.cpp" line="554"/>
@@ -2178,7 +2290,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/propagateupload.cpp" line="243"/>
         <source>File Removed</source>
-        <translation>파일 제거됨</translation>
+        <translation>파일 삭제됨</translation>
     </message>
     <message>
         <location filename="../src/libsync/propagateupload.cpp" line="112"/>
@@ -2210,7 +2322,7 @@ Note that using any logging command line options will override the settings.</so
         <location filename="../src/libsync/propagateupload.cpp" line="141"/>
         <location filename="../src/libsync/propagateupload.cpp" line="459"/>
         <source>Upload of %1 exceeds the quota for the folder</source>
-        <translation>%1의 업로드가 폴더의 할당량을 초과합니다</translation>
+        <translation>%1을(를) 업로드하면 폴더 용량을 넘습니다</translation>
     </message>
 </context>
 <context>
@@ -2228,7 +2340,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/propagateuploadtus.cpp" line="243"/>
         <source>Upload did not receive a Content-Location.</source>
-        <extracomment>Content-Location is a technical term, don't translate.</extracomment>
+        <extracomment>Content-Location is a technical term, don&apos;t translate.</extracomment>
         <translation>업로드에서 Content-Location을 받지 못했습니다.</translation>
     </message>
     <message>
@@ -2352,7 +2464,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/selectivesyncwidget.cpp" line="70"/>
         <source>Loading...</source>
-        <translation>로딩 중...</translation>
+        <translation>불러오는 중...</translation>
     </message>
     <message>
         <location filename="../src/gui/selectivesyncwidget.cpp" line="76"/>
@@ -2415,7 +2527,7 @@ Note that using any logging command line options will override the settings.</so
         <location filename="../src/gui/socketapi/socketapi.cpp" line="508"/>
         <source>Share with %1</source>
         <comment>parameter is OpenCloud</comment>
-        <translation>%1와(과) 공유</translation>
+        <translation>%1(으)로 공유</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="606"/>
@@ -2425,7 +2537,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="608"/>
         <source>Do you want to delete the directory »%1« and all its contents permanently?</source>
-        <translation>디렉터리 »%1«과(와) 그 모든 내용을 영구적으로 삭제하시겠습니까?</translation>
+        <translation>»%1« 폴더와 안의 내용을 모두 영구 삭제하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="609"/>
@@ -2466,7 +2578,7 @@ Note that using any logging command line options will override the settings.</so
         <location filename="../src/gui/socketapi/socketapi.cpp" line="779"/>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="815"/>
         <source>Copy private link to clipboard</source>
-        <translation>비공개 링크를 클립보드에 복사</translation>
+        <translation>비공개 링크 복사</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="780"/>
@@ -2501,18 +2613,18 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="916"/>
         <source>Rename and upload...</source>
-        <translation>이름 바꾸기 및 업로드...</translation>
+        <translation>이름 바꿔 업로드...</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="921"/>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="925"/>
         <source>Move and rename...</source>
-        <translation>이동 및 이름 바꾸기...</translation>
+        <translation>이동하고 이름 바꾸기...</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="928"/>
         <source>Move, rename and upload...</source>
-        <translation>이동, 이름 바꾸기 및 업로드...</translation>
+        <translation>이동하고 이름 바꿔 업로드...</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="931"/>
@@ -2522,7 +2634,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="936"/>
         <source>Move and upload...</source>
-        <translation>이동 및 업로드...</translation>
+        <translation>이동해 업로드...</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="937"/>
@@ -2546,7 +2658,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/syncengine.cpp" line="354"/>
         <source>Unable to open or create the local sync database. Make sure you have write access in the sync folder.</source>
-        <translation>로컬 동기화 데이터베이스를 열거나 생성할 수 없습니다. 동기화 폴더에 쓰기 권한이 있는지 확인하십시오.</translation>
+        <translation>로컬 동기화 데이터베이스를 열거나 생성할 수 없습니다. 동기화 폴더에 쓰기 권한이 있는지 확인하세요.</translation>
     </message>
     <message>
         <location filename="../src/libsync/syncengine.cpp" line="768"/>
@@ -2556,7 +2668,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/syncengine.cpp" line="775"/>
         <source>Space quota exceeded. Please contact the Administrator of this space.</source>
-        <translation>스페이스 할당량을 초과했습니다. 이 스페이스의 관리자에게 문의하십시오.</translation>
+        <translation>스페이스 용량을 넘었습니다. 이 스페이스 관리자에게 문의하세요.</translation>
     </message>
     <message>
         <location filename="../src/libsync/syncengine.cpp" line="266"/>
@@ -2602,12 +2714,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/systray.cpp" line="146"/>
         <source>Disconnected from %1</source>
-        <translation>%1에서 연결 끊김</translation>
+        <translation>%1 연결 끊김</translation>
     </message>
     <message>
         <location filename="../src/gui/systray.cpp" line="149"/>
         <source>Disconnected from accounts:</source>
-        <translation>계정에서 연결 끊김:</translation>
+        <translation>연결이 끊긴 계정:</translation>
     </message>
     <message>
         <location filename="../src/gui/systray.cpp" line="151"/>
@@ -2673,9 +2785,9 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OCC::Theme</name>
     <message>
-        <location filename="../src/libsync/theme.cpp" line="146"/>
-        <source>&lt;p&gt;Version %1. For more information visit &lt;a href=&quot;https://opencloud.eu/&quot;&gt;https://opencloud.eu/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;For known issues and help, please visit: &lt;a href=&quot;https://github.com/opencloud-eu/desktop&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;Distributed by OpenCloud GmbH and licensed under the GNU General Public License (GPL) Version 2.0.&lt;br/&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</source>
-        <translation>&lt;p&gt;버전 %1. 자세한 내용은 &lt;a href=&quot;https://opencloud.eu/&quot;&gt;https://opencloud.eu/&lt;/a&gt;를 방문하세요.&lt;/p&gt;&lt;p&gt;알려진 문제 및 도움말은 다음을 방문하세요: &lt;a href=&quot;https://github.com/opencloud-eu/desktop&quot;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;OpenCloud GmbH에서 배포하며 GNU General Public License (GPL) 버전 2.0에 따라 라이선스가 부여됩니다.&lt;br/&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</translation>
+        <location filename="../src/libsync/theme.cpp" line="149"/>
+        <source>&lt;p&gt;Version %1. Based on OpenCloud Desktop.&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (modifications)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;Distributed by ChaeumAI Inc. under the GNU General Public License (GPL) version 2 or later, without any warranty. The license texts and third-party notices are in the licenses folder of the installation.&lt;/p&gt;&lt;p&gt;Source code of this version: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop/releases&quot;&gt;GitHub&lt;/a&gt;. For three years after distribution we will also send the complete source code to anyone who asks (support@chaeumai.com).&lt;/p&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</source>
+        <translation>&lt;p&gt;버전 %1. OpenCloud Desktop을 바탕으로 만들었습니다.&lt;/p&gt;&lt;p&gt;Copyright ChaeumAI Inc. (수정분)&lt;br/&gt;Copyright OpenCloud GmbH&lt;br/&gt;Copyright ownCloud GmbH&lt;/p&gt;&lt;p&gt;ChaeumAI Inc.가 배포하며 GNU General Public License(GPL) 2.0 이상에 따라 이용할 수 있습니다. 어떠한 보증도 하지 않습니다. 라이선스 전문과 함께 쓴 구성 요소의 고지는 설치 폴더의 licenses 폴더에 있습니다.&lt;/p&gt;&lt;p&gt;이 판의 소스 코드: &lt;a href=&quot;https://github.com/ceo-chaeum-ai/desktop/releases&quot;&gt;GitHub&lt;/a&gt;. 배포 뒤 3년 동안은 요청하는 누구에게나 전체 소스 코드를 보내 드립니다(support@chaeumai.com).&lt;/p&gt;&lt;p&gt;&lt;small&gt;%2&lt;/small&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -2688,7 +2800,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/tlserrordialog.ui" line="42"/>
         <source>Do you want to trust this certificate anyway?</source>
-        <translation>이 인증서를 신뢰하시겠습니까?</translation>
+        <translation>그래도 이 인증서를 신뢰하시겠습니까?</translation>
     </message>
     <message>
         <location filename="../src/gui/tlserrordialog.cpp" line="28"/>
@@ -2743,12 +2855,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updateurldialog.cpp" line="32"/>
         <source>Url update requested for %1</source>
-        <translation>%1에 대한 URL 업데이트 요청됨</translation>
+        <translation>%1 주소 변경 요청</translation>
     </message>
     <message>
         <location filename="../src/gui/updateurldialog.cpp" line="33"/>
         <source>The URL for &lt;b&gt;%1&lt;/b&gt; changed from:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt; to:&lt;br&gt; &lt;b&gt;%3&lt;/b&gt;.&lt;br&gt;&lt;br&gt;Do you want to accept the new URL permanently?&lt;br&gt;This will cause an application restart.</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt;의 URL이 다음에서 변경되었습니다:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt; -&gt; &lt;br&gt; &lt;b&gt;%3&lt;/b&gt;.&lt;br&gt;&lt;br&gt;새 URL을 영구적으로 수락하시겠습니까?&lt;br&gt;애플리케이션이 다시 시작됩니다.</translation>
+        <translation>&lt;b&gt;%1&lt;/b&gt;의 URL이 다음에서 변경되었습니다:&lt;br&gt;&lt;b&gt;%2&lt;/b&gt; -&gt; &lt;br&gt; &lt;b&gt;%3&lt;/b&gt;.&lt;br&gt;&lt;br&gt;새 URL을 영구적으로 수락하시겠습니까?&lt;br&gt;앱이 다시 시작됩니다.</translation>
     </message>
 </context>
 <context>
@@ -2787,7 +2899,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="409"/>
         <source>&lt;p&gt;A new version of the %1 Desktop App is available but the updating process failed.&lt;/p&gt;&lt;p&gt;&lt;b&gt;%2&lt;/b&gt; has been downloaded. The installed version is %3.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;%1 데스크톱 앱의 새 버전을 사용할 수 있지만 업데이트 프로세스가 실패했습니다.&lt;/p&gt;&lt;p&gt;&lt;b&gt;%2&lt;/b&gt;이(가) 다운로드되었습니다. 설치된 버전은 %3입니다.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;%1 데스크톱 앱의 새 버전이 나왔지만 업데이트하지 못했습니다.&lt;/p&gt;&lt;p&gt;&lt;b&gt;%2&lt;/b&gt;이(가) 다운로드되었습니다. 설치된 버전은 %3입니다.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="423"/>
@@ -2797,7 +2909,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="424"/>
         <source>Restart and update</source>
-        <translation>다시 시작 및 업데이트</translation>
+        <translation>다시 시작해 업데이트</translation>
     </message>
     <message>
         <location filename="../src/gui/updater/ocupdater.cpp" line="425"/>
@@ -2810,12 +2922,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/states/accountconfiguredsetupwizardstate.cpp" line="54"/>
         <source>Invalid local download directory: %1</source>
-        <translation type="unfinished"/>
+        <translation>PC 폴더가 올바르지 않습니다: %1</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/states/accountconfiguredsetupwizardstate.cpp" line="57"/>
         <source>path must be absolute</source>
-        <translation type="unfinished"/>
+        <translation>전체 경로로 적어야 합니다</translation>
     </message>
 </context>
 <context>
@@ -2823,12 +2935,27 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.cpp" line="33"/>
         <source>Select the local folder</source>
-        <translation>로컬 폴더 선택</translation>
+        <translation>PC 폴더 선택</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.cpp" line="43"/>
         <source>Sync location not supported</source>
         <translation>동기화 위치가 지원되지 않음</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.cpp" line="83"/>
+        <source>How to sync</source>
+        <translation>동기화 방식</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.cpp" line="84"/>
+        <source>Spaces</source>
+        <translation>스페이스</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/pages/accountconfiguredwizardpage.cpp" line="85"/>
+        <source>Folder on this computer</source>
+        <translation>PC 폴더</translation>
     </message>
 </context>
 <context>
@@ -2836,31 +2963,41 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/states/oauthcredentialssetupwizardstate.cpp" line="45"/>
         <source>Oauth2 authentication requires a secured connection.</source>
-        <translation type="unfinished"/>
+        <translation>OAuth2 로그인에는 보안 연결(HTTPS)이 필요합니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/states/oauthcredentialssetupwizardstate.cpp" line="49"/>
         <source>Error while trying to log in to OAuth2-enabled server.</source>
-        <translation type="unfinished"/>
+        <translation>서버에 로그인하는 중 오류가 났습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/states/oauthcredentialssetupwizardstate.cpp" line="64"/>
         <source>Failed to look up instances: %1</source>
-        <translation type="unfinished"/>
+        <translation>인스턴스를 조회하지 못했습니다: %1</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/states/oauthcredentialssetupwizardstate.cpp" line="68"/>
         <source>Server returned empty list of instances</source>
-        <translation type="unfinished"/>
+        <translation>서버가 빈 인스턴스 목록을 돌려주었습니다</translation>
     </message>
 </context>
 <context>
     <name>OCC::Wizard::ServerUrlSetupWizardPage</name>
     <message>
         <location filename="../src/gui/newwizard/pages/serverurlsetupwizardpage.cpp" line="68"/>
+        <source>Connect to %1</source>
+        <translation>%1에 연결</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/pages/serverurlsetupwizardpage.cpp" line="69"/>
+        <source>Server address</source>
+        <translation>서버 주소</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/pages/serverurlsetupwizardpage.cpp" line="73"/>
         <source>%1 logo</source>
         <extracomment>This is the accessibility text for the logo in the setup wizard page. The parameter is the name for the (branded) application.</extracomment>
-        <translation type="unfinished"/>
+        <translation>%1 로고</translation>
     </message>
 </context>
 <context>
@@ -2868,7 +3005,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/states/serverurlsetupwizardstate.cpp" line="52"/>
         <source>Invalid server URL</source>
-        <translation type="unfinished"/>
+        <translation>서버 주소가 올바르지 않습니다</translation>
     </message>
 </context>
 <context>
@@ -2876,7 +3013,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/setupwizardcontroller.cpp" line="156"/>
         <source>Invalid credentials</source>
-        <translation>잘못된 자격 증명</translation>
+        <translation>로그인 정보가 올바르지 않습니다</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/setupwizardcontroller.cpp" line="159"/>
@@ -2895,55 +3032,45 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="45"/>
         <source>&lt; &amp;Back</source>
-        <translation>&lt; 뒤로(&amp;B)</translation>
+        <translation>뒤로(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="51"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="70"/>
         <source>Cancel Setup</source>
         <translation>설정 취소</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="52"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="71"/>
         <source>Do you really want to cancel the account setup?</source>
         <translation>계정 설정을 취소하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="109"/>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="110"/>
-        <source>Done</source>
-        <translation>완료</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="109"/>
-        <source>&amp;Finish</source>
-        <translation>마침(&amp;F)</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="110"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="128"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="129"/>
         <source>Finish</source>
         <translation>마침</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="112"/>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="113"/>
-        <source>Continue</source>
-        <translation>계속</translation>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="128"/>
+        <source>&amp;Finish</source>
+        <translation>마침(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="112"/>
-        <source>&amp;Next &gt;</source>
-        <translation>다음(&amp;N) &gt;</translation>
-    </message>
-    <message>
-        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="113"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="131"/>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="132"/>
         <source>Next</source>
         <translation>다음</translation>
+    </message>
+    <message>
+        <location filename="../src/gui/newwizard/setupwizardwidget.cpp" line="131"/>
+        <source>&amp;Next &gt;</source>
+        <translation>다음(&amp;N)</translation>
     </message>
 </context>
 <context>
     <name>OpenCloudTheme::aboutVersions()</name>
     <message>
-        <location filename="../src/libsync/theme.cpp" line="133"/>
+        <location filename="../src/libsync/theme.cpp" line="135"/>
         <source>%1 %2%7%8Libraries Qt %3, %4%7Using virtual files plugin: %5%7%6</source>
         <translation>%1 %2%7%8라이브러리 Qt %3, %4%7가상 파일 플러그인 사용: %5%7%6</translation>
     </message>
@@ -2951,7 +3078,7 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OpenCloudTheme::qtVer</name>
     <message>
-        <location filename="../src/libsync/theme.cpp" line="116"/>
+        <location filename="../src/libsync/theme.cpp" line="118"/>
         <source>%1 (Built against Qt %2)</source>
         <translation>%1 (Qt %2 기반 빌드)</translation>
     </message>
@@ -2959,7 +3086,7 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>OpenCloudTheme::versionWithSha</name>
     <message>
-        <location filename="../src/libsync/theme.cpp" line="121"/>
+        <location filename="../src/libsync/theme.cpp" line="123"/>
         <source>%1 %2</source>
         <translation>%1 %2</translation>
     </message>
@@ -2974,12 +3101,16 @@ Note that using any logging command line options will override the settings.</so
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="311"/>
         <source>%n day(s) ago</source>
-        <translation><numerusform>%n일 전</numerusform></translation>
+        <translation>
+            <numerusform>%n일 전</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="321"/>
         <source>%n hour(s) ago</source>
-        <translation><numerusform>%n시간 전</numerusform></translation>
+        <translation>
+            <numerusform>%n시간 전</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/libsync/common/utility.cpp" line="327"/>
@@ -2989,12 +3120,14 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/common/utility.cpp" line="329"/>
         <source>less than a minute ago</source>
-        <translation>1분 미만 전</translation>
+        <translation>방금 전</translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="333"/>
         <source>%n minute(s) ago</source>
-        <translation><numerusform>%n분 전</numerusform></translation>
+        <translation>
+            <numerusform>%n분 전</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/libsync/syncresult.cpp" line="112"/>
@@ -3049,7 +3182,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/pages/serverurlsetupwizardpage.ui" line="85"/>
         <source>What is your server&apos;s address?</source>
-        <translation>서버 주소가 무엇입니까?</translation>
+        <translation>서버 주소를 입력하세요</translation>
     </message>
 </context>
 <context>
@@ -3062,7 +3195,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/enums.cpp" line="32"/>
         <source>Welcome</source>
-        <translation>환영합니다</translation>
+        <translation>서버</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/enums.cpp" line="35"/>
@@ -3072,7 +3205,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/enums.cpp" line="37"/>
         <source>Sync Options</source>
-        <translation>동기화 옵션</translation>
+        <translation>동기화 방식</translation>
     </message>
 </context>
 <context>
@@ -3085,7 +3218,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/newwizard/setupwizardwidget.ui" line="101"/>
         <source>&amp;Dismiss</source>
-        <translation>무시(&amp;D)</translation>
+        <translation>닫기(&amp;D)</translation>
     </message>
     <message>
         <location filename="../src/gui/newwizard/setupwizardwidget.ui" line="116"/>
@@ -3244,7 +3377,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/updater/updatedownloadedwidget.ui" line="74"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Restart required&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>다시 시작 필요</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;다시 시작해야 합니다&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -3257,7 +3390,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/qml/UpdateUrlDialog.qml" line="53"/>
         <source>Accept and Restart</source>
-        <translation>수락 및 다시 시작</translation>
+        <translation>수락하고 다시 시작</translation>
     </message>
     <message>
         <location filename="../src/gui/qml/UpdateUrlDialog.qml" line="53"/>
@@ -3270,32 +3403,44 @@ Note that using any logging command line options will override the settings.</so
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="215"/>
         <source>%n year(s)</source>
-        <translation><numerusform>%n년</numerusform></translation>
+        <translation>
+            <numerusform>%n년</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="216"/>
         <source>%n month(s)</source>
-        <translation><numerusform>%n개월</numerusform></translation>
+        <translation>
+            <numerusform>%n개월</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="217"/>
         <source>%n day(s)</source>
-        <translation><numerusform>%n일</numerusform></translation>
+        <translation>
+            <numerusform>%n일</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="218"/>
         <source>%n hour(s)</source>
-        <translation><numerusform>%n시간</numerusform></translation>
+        <translation>
+            <numerusform>%n시간</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="219"/>
         <source>%n minute(s)</source>
-        <translation><numerusform>%n분</numerusform></translation>
+        <translation>
+            <numerusform>%n분</numerusform>
+        </translation>
     </message>
     <message numerus="yes">
         <location filename="../src/libsync/common/utility.cpp" line="220"/>
         <source>%n second(s)</source>
-        <translation><numerusform>%n초</numerusform></translation>
+        <translation>
+            <numerusform>%n초</numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../src/libsync/common/utility.cpp" line="244"/>
@@ -3313,12 +3458,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/vfs/vfs.cpp" line="247"/>
         <source>ReFS is currently not supported.</source>
-        <translation type="unfinished"/>
+        <translation>ReFS는 아직 지원하지 않습니다.</translation>
     </message>
     <message>
         <location filename="../src/libsync/vfs/vfs.cpp" line="255"/>
         <source>The Virtual filesystem %1 is not supported on this platform</source>
-        <translation type="unfinished"/>
+        <translation>이 운영체제에서는 가상 파일 시스템 %1을(를) 쓸 수 없습니다</translation>
     </message>
 </context>
 <context>
@@ -3332,12 +3477,12 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>account loading</name>
     <message>
-        <location filename="../src/gui/main.cpp" line="470"/>
+        <location filename="../src/gui/main.cpp" line="473"/>
         <source>Error accessing the configuration file</source>
         <translation>구성 파일 접근 오류</translation>
     </message>
     <message>
-        <location filename="../src/gui/main.cpp" line="471"/>
+        <location filename="../src/gui/main.cpp" line="474"/>
         <source>There was an error while accessing the configuration file at %1.</source>
         <translation>%1의 구성 파일에 접근하는 중 오류가 발생했습니다.</translation>
     </message>
@@ -3347,7 +3492,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/common/pinstate.cpp" line="27"/>
         <source>Always available locally</source>
-        <translation>항상 로컬에서 사용 가능</translation>
+        <translation>항상 이 PC에 두기</translation>
     </message>
     <message>
         <location filename="../src/libsync/common/pinstate.cpp" line="29"/>
@@ -3370,12 +3515,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="33"/>
         <source>Virtual file created</source>
-        <translation>가상 파일 생성됨</translation>
+        <translation>온라인 전용 파일 만듦</translation>
     </message>
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="35"/>
         <source>Replaced by virtual file</source>
-        <translation>가상 파일로 대체됨</translation>
+        <translation>온라인 전용 파일로 바꿈</translation>
     </message>
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="37"/>
@@ -3415,7 +3560,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="53"/>
         <source>Updated local metadata</source>
-        <translation>로컬 메터데이터 업데이트완료</translation>
+        <translation>로컬 메타데이터 업데이트완료</translation>
     </message>
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="55"/>
@@ -3451,12 +3596,12 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="78"/>
         <source>error</source>
-        <translation>에러</translation>
+        <translation>오류</translation>
     </message>
     <message>
         <location filename="../src/libsync/progressdispatcher.cpp" line="80"/>
         <source>updating local metadata</source>
-        <translation>로컬 메터데이터 업데이트</translation>
+        <translation>로컬 메타데이터 업데이트</translation>
     </message>
 </context>
 <context>
@@ -3469,7 +3614,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/guiutility.cpp" line="40"/>
         <source>There was an error when launching the browser to go to URL %1. Maybe no default browser is configured?</source>
-        <translation>URL %1을/를 열기 위해 브라우저를 실행하는 중 오류가 발생했습니다. 기본 웹 브라우저가 설정되어 있지 않을 수 있습니다.</translation>
+        <translation>URL %1을(를) 열기 위해 브라우저를 실행하는 중 오류가 발생했습니다. 기본 웹 브라우저가 설정되어 있지 않을 수 있습니다.</translation>
     </message>
     <message>
         <location filename="../src/gui/guiutility.cpp" line="63"/>
@@ -3484,7 +3629,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/guiutility.cpp" line="77"/>
         <source>Make always available locally</source>
-        <translation>항상 로컬에서 사용 가능</translation>
+        <translation>항상 이 PC에 두기</translation>
     </message>
     <message>
         <location filename="../src/gui/guiutility.cpp" line="82"/>
@@ -3495,7 +3640,7 @@ Note that using any logging command line options will override the settings.</so
 <context>
     <name>version check</name>
     <message>
-        <location filename="../src/gui/main.cpp" line="172"/>
+        <location filename="../src/gui/main.cpp" line="174"/>
         <source>Some settings were configured in newer versions of this client and use features that are not available in this version</source>
         <translation>일부 설정은 이 클라이언트의 최신 버전에서 구성되었으며, 현재 버전에서는 지원하지 않는 기능을 사용하고 있습니다.</translation>
     </message>

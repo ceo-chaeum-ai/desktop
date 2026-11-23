@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Hannah von Reth <hannah.vonreth@owncloud.com>
  *
@@ -20,7 +21,8 @@ using namespace OCC;
 QString CommonStrings::fileBrowser()
 {
 #ifdef Q_OS_WIN
-    return QStringLiteral("Explorer");
+    // Chaeum Drive (2026-11-19): translatable, Windows calls it File Explorer
+    return tr("File Explorer");
 #elif defined(Q_OS_MAC)
     return QStringLiteral("Finder");
 #else

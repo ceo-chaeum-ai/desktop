@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Hannah von Reth <hannah.vonreth@owncloud.com>
  *
@@ -90,7 +91,10 @@ ColumnLayout {
                 visible: errorMessages.length > 1 || errorItem.truncated
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                // the card height follows our implicit height, so reserve room for the button
+                implicitHeight: showMoreButton.implicitHeight
                 Button {
+                    id: showMoreButton
                     anchors.horizontalCenter: parent.horizontalCenter
                     text: qsTr("Show more")
                     onClicked: {

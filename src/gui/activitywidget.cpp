@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-18) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Klaas Freitag <freitag@owncloud.com>
  *
@@ -33,18 +34,24 @@ namespace OCC {
 ActivitySettings::ActivitySettings(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *hbox = new QHBoxLayout(this);
-    setLayout(hbox);
+    // Chaeum Drive (2026-11-18): page title and the same margins as the settings page
+    auto *vbox = new QVBoxLayout(this);
+    vbox->setContentsMargins(32, 24, 32, 24);
+    vbox->setSpacing(14);
+    auto *title = new QLabel(tr("Activity"), this);
+    title->setProperty("chaeumRole", QStringLiteral("title"));
+    vbox->addWidget(title);
 
-    // create a tab widget for the three activity views
+    // create a tab widget for the activity views
     _tab = new QTabWidget(this);
-    hbox->addWidget(_tab);
+    _tab->setDocumentMode(true);
+    vbox->addWidget(_tab);
 
     _protocolWidget = new ProtocolWidget(this);
-    _tab->addTab(_protocolWidget, Resources::FontIcon(u''), tr("Local Activity"));
+    _tab->addTab(_protocolWidget, tr("Local Activity"));
 
     _issuesWidget = new IssuesWidget(this);
-    const int issueTabId = _tab->addTab(_issuesWidget, Resources::FontIcon(u''), tr("Not Synced"));
+    const int issueTabId = _tab->addTab(_issuesWidget, tr("Not Synced"));
     connect(_issuesWidget, &IssuesWidget::issueCountUpdated, this, [issueTabId, this](int issueCount) {
         QString cntText = tr("Not Synced");
         if (issueCount) {

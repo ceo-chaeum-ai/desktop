@@ -1,3 +1,4 @@
+// Modified by ChaeumAI Inc. (2026-11-19) for Chaeum Drive. See CHAEUM-CHANGES.md.
 /*
  * Copyright (C) by Hannah von Reth <hannah.vonreth@owncloud.com>
  *
@@ -13,7 +14,9 @@
  */
 #pragma once
 
+#include <QHash>
 #include <QHeaderView>
+#include <QSet>
 
 namespace OCC {
 
@@ -33,14 +36,25 @@ public:
     bool resizeToContent() const;
     void setResizeToContent(bool newResizeToContent);
 
+    void setModel(QAbstractItemModel *model) override;
+
+    // columns that never grow past the default size when fitted to content (long paths)
+    void setNarrowColumns(const QSet<int> &columns);
+
 protected:
     void resizeEvent(QResizeEvent *event) override;
 
+    // the width the content of a column needs, measured once rows are there
+    int contentWidth(int section);
 
 private:
     bool _requiresReset = false;
     bool _resizeToContent = false;
     int _expandingColumn = 0;
+    QSet<int> _narrowColumns;
+    QHash<int, int> _contentWidths;
+    // the widths the last layout gave, a column changed since then was sized by hand
+    QHash<int, int> _laidOutWidths;
 };
 
 }
