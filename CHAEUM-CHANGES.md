@@ -108,6 +108,6 @@ the dates are the first and last day of our changes. The full history is in the 
 | M | `src/resources/theme/universal/opencloud-icon.svg` | 2026-11-16 | Chaeum Drive: app icons in the new style (large D on gold, small Chaeum AI logo on a cream disc) |
 | M | `src/resources/theme/universal/wizard_logo.svg` | 2026-11-16 | Chaeum Drive: app icons in the new style (large D on gold, small Chaeum AI logo on a cream disc) |
 | M | `src/resources/wizard/style.qss` | 2026-11-18 | Chaeum Drive: new light UI for the main window, settings, activity and account wizard |
-| M | `translations/desktop_ko.ts` | 2026-11-18 to 2026-11-21 | Account wizard: restore Alt mnemonics on Back, Next, Finish and Cancel |
+| M | `translations/desktop_ko.ts` | 2026-11-18 to 2026-11-23 | Korean: Alt mnemonics in the account wizard; app-name particles in the quit dialog and the Explorer share menu |
 | A | `CHAEUM-CHANGES.md` | 2026-11-21 | this file |
 | A | `admin/chaeum/licenses/` | 2026-11-21 | license texts and third-party notices shipped with the package |

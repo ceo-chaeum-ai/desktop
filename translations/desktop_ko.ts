@@ -2508,7 +2508,7 @@ Note that using any logging command line options will override the settings.</so
     <message>
         <location filename="../src/gui/settingsdialog.cpp" line="126"/>
         <source>Are you sure you want to quit %1?</source>
-        <translation>정말 %1을(를) 종료하시겠습니까?</translation>
+        <translation>%1를 종료할까요?</translation>
     </message>
     <message>
         <location filename="../src/gui/settingsdialog.cpp" line="152"/>
@@ -2527,7 +2527,7 @@ Note that using any logging command line options will override the settings.</so
         <location filename="../src/gui/socketapi/socketapi.cpp" line="508"/>
         <source>Share with %1</source>
         <comment>parameter is OpenCloud</comment>
-        <translation>%1(으)로 공유</translation>
+        <translation>%1로 공유</translation>
     </message>
     <message>
         <location filename="../src/gui/socketapi/socketapi.cpp" line="606"/>
