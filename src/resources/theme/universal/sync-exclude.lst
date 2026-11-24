@@ -48,3 +48,9 @@
 .nfs*
 
 My Saved Places.
+
+# Chaeum Drive: search text the server extracts from the document drawer (서류함).
+# It is only for server search, so PC sync leaves it out. Full-path patterns are
+# anchored at the space root; the second line covers a drawer one folder down.
+서류함/_text/
+*/서류함/_text/
